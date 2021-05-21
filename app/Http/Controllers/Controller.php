@@ -17,6 +17,11 @@ class Controller extends BaseController
         return view('index')->with('getContact', Contact::all());
        
 	}
+	public function login()
+	{
+        return view('auth.login');
+       
+	}
      public function getDashboard()
 	{
             
