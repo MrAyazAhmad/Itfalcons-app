@@ -1,5 +1,5 @@
 @extends('dashboard.layout.main')
-
+<?php $act = "Dashboard";  ?>
 @section('content')
   <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -173,127 +173,11 @@
     </div>
   </div>
 
-   @foreach ($getContact as $Contact)
-            <div class="row" id="cid{{$Contact->id}}">
-              <div class="col-lg-8 col-md-12">
-                <div class="card">
-                  <div class="card-header card-header-warning">
-                    <h4 class="card-title">Map</h4>
-                    <p class="card-category" id="locationReload">{{$Contact->location}}</p>
-                  </div>
-                  <div class="card-body table-responsive">
-                    <iframe style="border:0;  width: 100%; height: 350px;" src="{{$Contact->mapp}}" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                </div>    
-              </div>
+ 
 
-              <div class="col-lg-4 col-md-12">
-                <div class="card">
-                  <div class="card-header card-header-primary">
-                    <h4 class="card-title">Contact</h4>
-                    <p class="card-category">Update Contact</p>
-                  </div>
-                  <div class="card-body table-responsive">
-                  <a href="javascript:void(0)" onclick="editContact({{$Contact->id}})" class="btn btn-info">Edit</a>
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
+           
 
-
-            
-            @endforeach 
-
-
-             <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Edit Contact</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form id="contactForm" method="post">
-                    @csrf
-
-                    <input type="hidden" name="id" id="id">
-                    <div class="form-group">
-                      <label for="firstname">Mapp</label>
-                      <input type="text" class="form-control" id="mapp">
-                    </div>
-                    <div class="form-group">
-                      <label for="lastname">Location</label>
-                      <input type="text" class="form-control" id="location">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="text" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Phone</label>
-                      <input type="text" class="form-control" id="phone">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
-
- <script>
-    function editContact(id)
-    {
-      $.get('contacts/'+id,function(contact){
-        $("#id").val(contact.id);
-        $("#mapp").val(contact.mapp);
-        $("#location").val(contact.location);
-        $("#email").val(contact.email);
-        $("#phone").val(contact.phone);
-        $("#contactModal").modal('toggle');
-      });
-    }
-    $("#contactForm").submit(function(e){
-      e.preventDefault();
-
-      let id = $("#id").val();
-      let mapp = $("#mapp").val();
-      let location = $("#location").val();
-      let email = $("#email").val();
-      let phone = $("#phone").val();
-      let _token = $("input[name=_token]").val();
-
-      $.ajax({
-        url: "{{route('contact.update')}}",
-        type:"PUT",
-        data:{
-          id:id,
-          mapp:mapp,
-          location:location,
-          email:email,
-          phone:phone,
-          _token:_token
-        },
-        success:function(response){
-          
-            alert("Updated........!");
-          $("#contactModal").modal('toggle');
-          $("#contactForm")[0].reset();
-          window.location.reload(true);
-        }
-      });    
-    });
-   
-  </script>
+ 
   @endsection
 
       

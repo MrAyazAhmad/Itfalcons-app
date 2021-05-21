@@ -10,11 +10,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $getportfolio = Portfolio::orderBy('id')->get();
-<<<<<<< HEAD
-=======
-        // dd($getportfolio);
-        // die();
->>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
+        
         return view('dashboard/portfolio',compact('getportfolio'));
     }
     public function addPortfolio(Request $request)
@@ -36,8 +32,6 @@ class PortfolioController extends Controller
         Portfolio::create($input);
         return redirect('portfolio')->with('success','Portfolio created successfully.');
     }
-<<<<<<< HEAD
-=======
     public function updatePortfolio(Request $request)
     {
         $request->validate([
@@ -62,12 +56,12 @@ class PortfolioController extends Controller
     {
         $data = [];
         $portfolio = Portfolio::find($id);
-        $data['id'] = $portfolio->id;
-        $data['name'] = $portfolio->name;
-        $data['info'] = $portfolio->info;
-        $data['type'] = $portfolio->type;
-        $data['image'] = $portfolio->image;
-        // echo $data['name'];
+        // $data['id'] = $portfolio->id;
+        // $data['name'] = $portfolio->name;
+        // $data['info'] = $portfolio->info;
+        // $data['type'] = $portfolio->type;
+        // $data['image'] = $portfolio->image;
+        // // echo $data['name'];
         // echo $data['info'];
         // echo $data['image'];
         // dd($portfolio);
@@ -81,5 +75,4 @@ class PortfolioController extends Controller
         $portfolio->delete();
         return response()->json(['success'=>'Record has been deleted']);
     }
->>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
 }
