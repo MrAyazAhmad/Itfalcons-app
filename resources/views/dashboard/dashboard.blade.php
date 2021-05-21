@@ -172,6 +172,7 @@
       </div>
     </div>
   </div>
+
    @foreach ($getContact as $Contact)
             <div class="row" id="cid{{$Contact->id}}">
               <div class="col-lg-8 col-md-12">
@@ -294,5 +295,6 @@
    
   </script>
   @endsection
+
       
      

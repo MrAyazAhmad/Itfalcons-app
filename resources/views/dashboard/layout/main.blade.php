@@ -28,6 +28,10 @@ Coded by www.creative-tim.com
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
   <link href="<?php echo url('/'); ?>/public/dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo url('/'); ?>/public/dashboard/assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -95,12 +99,14 @@ Coded by www.creative-tim.com
               <p>Typography</p>
             </a>
           </li>
+
            <li>
             <a href="contactform_detail">
               <i class="fa fa-address-book"></i>
               <p>Contacts</p>
             </a>
           </li>
+
  
         </ul>
       </div>

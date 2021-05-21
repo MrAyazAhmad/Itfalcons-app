@@ -27,13 +27,21 @@
                         <tbody>
                           <?php $count = 1 ?>
                           @foreach ($getportfolio as $portfolio)
+<<<<<<< HEAD
                             <tr id="did{{$portfolio->id}}">
+=======
+                            <tr id="pid{{$portfolio->id}}">
+>>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
                               <td>@php echo $count @endphp</td>
                               <td>{{$portfolio->name}}</td>
                               <td>{{$portfolio->info}}</td>
                               <td>{{$portfolio->type}}</td>
                               <td><img src="<?php echo url('/'); ?>/public/image/portfolio/{{$portfolio->image}}" alt="{{$portfolio->image}}" style="height:50px; width:100px"></td>
+<<<<<<< HEAD
                               <td><a href="javascript:void(0)" onclick="editPortfolio({{$portfolio->id}})" class="btn btn-info">Edit</a></td>
+=======
+                              <td><a href="edit_portfolio/{{$portfolio->id}}" class="btn btn-info">Edit</a></td>
+>>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
                               <td><a href="javascript:void(0)" onclick="deletePortfolio({{$portfolio->id}})" class="btn btn-danger">Delete</a></td>
                             </tr>
                             @php $count++ @endphp
@@ -83,4 +91,28 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+    
+    
+    <script>
+      function deletePortfolio(id)
+      {
+        if (confirm("Do you really want to delete this record?")) 
+        {
+          $.ajax({
+          url: 'deleteportfolio/'+id,
+          type:"DELETE",
+          data:{
+            _token:$("input[name=_token]").val()
+          },
+          success:function(response){
+            $('#pid'+id).remove();
+          }
+        });
+        }
+      }
+    </script>
+>>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
 @endsection

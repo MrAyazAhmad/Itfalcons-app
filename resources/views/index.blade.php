@@ -858,6 +858,7 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo url('/'); ?>/public/index/assets/js/main.js"></script>
+<<<<<<< HEAD
 
 
   <script>
@@ -895,6 +896,8 @@
       });
     });
   </script>
+=======
+>>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
 
 </body>
 
