@@ -26,9 +26,9 @@ Route::post('add_portfolio', [PortfolioController::class,'addPortfolio']);
 Route::get('portfolio', [PortfolioController::class,'index']);
 
 Route::get('dashboard', [Controller::class,'getDashboard']);
-/*Route::get('test', function () {
-    return view('dashboard/testing');
-});*/
+Route::get('login', function () {
+    return view('Auth/login');
+});
 /*=======
 Route::get('/', function () {
     return view('index');
