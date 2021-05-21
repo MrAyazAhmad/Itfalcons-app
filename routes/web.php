@@ -6,6 +6,8 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AboutIconController;
+use App\Http\Controllers\AboutVideoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,6 +55,20 @@ Route::post('add_service', [ServiceController::class,'addService']);
 Route::get('edit_service/{id}',[ServiceController::class,'getServiceById']);
 Route::post('update_service/{id}', [ServiceController::class,'updateService']);
 Route::delete('deleteservice/{id}',[ServiceController::class,'deleteService']);
+
+
+Route::get('aboutIcon', [AboutIconController::class,'index']);
+Route::post('add_aboutIcon', [AboutIconController::class,'addAboutIcon']);
+Route::get('edit_aboutIcon/{id}',[AboutIconController::class,'getAboutIconById']);
+Route::post('update_aboutIcon/{id}', [AboutIconController::class,'updateAboutIcon']);
+Route::delete('deleteaboutIcon/{id}',[AboutIconController::class,'deleteAboutIcon']);
+
+
+
+Route::get('aboutVideo', [AboutVideoController::class,'index']);
+Route::get('edit_aboutVideo/{id}',[AboutVideoController::class,'getAboutVideoById']);
+Route::post('update_aboutVideo/{id}', [AboutVideoController::class,'updateAboutVideo']);
+Route::get('videoDescriptions/{id}',[AboutVideoController::class,'getAboutDescriptionById']);
 // Route::get('portfolio', function () {
 //     return view('dashboard/portfolio');
 // });

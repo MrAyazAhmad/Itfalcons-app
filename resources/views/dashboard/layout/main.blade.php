@@ -30,6 +30,7 @@ Coded by www.creative-tim.com
   <!-- CSS Files -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="<?php echo url('/'); ?>/public/dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo url('/'); ?>/public/dashboard/assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -55,48 +56,51 @@ Coded by www.creative-tim.com
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav" style="overflow:none">
-          <li class="active ">
-            <a href="./dashboard.html">
+          <li >
+            <a href="dashboard">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
+            <a href="team">
               <i class="nc-icon nc-diamond"></i>
-              <p>Icons</p>
+              <p>Team</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
-              <i class="nc-icon nc-pin-3"></i>
-              <p>Maps</p>
-            </a>
-          </li>
           <li>
-            <a href="./notifications.html">
+            <a href="portfolio">
               <i class="nc-icon nc-bell-55"></i>
-              <p>Notifications</p>
+              <p>Portfolio</p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
-              <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+            <a href="service">
+              <i class="nc-icon nc-bell-55"></i>
+              <p>Service</p>
             </a>
           </li>
           <li>
-            <a href="./tables.html">
-              <i class="nc-icon nc-tile-56"></i>
-              <p>Table List</p>
+            <a href="testimonial">
+              <i class="nc-icon nc-bell-55"></i>
+              <p>Testimonial</p>
             </a>
           </li>
           <li>
-            <a href="./typography.html">
-              <i class="nc-icon nc-caps-small"></i>
-              <p>Typography</p>
+            <a href="aboutIcon">
+              <i class="nc-icon nc-bell-55"></i>
+              <p>About Icon</p>
             </a>
           </li>
+          <li>
+            <a href="aboutVideo">
+              <i class="nc-icon nc-bell-55"></i>
+              <p>About Content</p>
+            </a>
+          </li>
+            
+          
  
         </ul>
       </div>
