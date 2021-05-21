@@ -27,12 +27,14 @@
                         <tbody>
                           <?php $count = 1 ?>
                           @foreach ($getportfolio as $portfolio)
-                            <tr id="pid{{$portfolio->id}}">
+
+                              <tr id="pid{{$portfolio->id}}">
                               <td>@php echo $count @endphp</td>
                               <td>{{$portfolio->name}}</td>
                               <td>{{$portfolio->info}}</td>
                               <td>{{$portfolio->type}}</td>
                               <td><img src="<?php echo url('/'); ?>/public/image/portfolio/{{$portfolio->image}}" alt="{{$portfolio->image}}" style="height:50px; width:100px"></td>
+
                               <td><a href="edit_portfolio/{{$portfolio->id}}" class="btn btn-info">Edit</a></td>
                               <td><a href="javascript:void(0)" onclick="deletePortfolio({{$portfolio->id}})" class="btn btn-danger">Delete</a></td>
                             </tr>
@@ -84,8 +86,6 @@
       </div>
     </div>
 
-    
-    
     <script>
       function deletePortfolio(id)
       {
@@ -104,4 +104,5 @@
         }
       }
     </script>
+
 @endsection

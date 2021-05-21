@@ -26,6 +26,8 @@
                                 <th>Icon</th>
                                 <th>Number</th>
                                 <th>Work</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>

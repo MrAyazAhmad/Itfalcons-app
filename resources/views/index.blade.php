@@ -702,39 +702,43 @@
         <div class="col-lg-6">
 
           <div class="row">
+            @foreach ($getContact as $Contact)
             <div class="col-md-12">
+
               <div class="info-box">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>{{$Contact->location}}</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>info@example.com<br>contact@example.com</p>
+                <p>{{$Contact->email}}</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                <p>{{$Contact->phone}}</p>
               </div>
             </div>
+            @endforeach
           </div>
 
         </div>
 
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form  method="post" role="form" class="php-email-form" id="contactform">
+            @csrf
             <div class="form-row">
-              <div class="col-md-5 form-group">
+              <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validate"></div>
               </div>
-              <div class="col-md-5 form-group">
+              <div class="col-md-6 form-group">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validate"></div>
               </div>
@@ -744,14 +748,14 @@
               <div class="validate"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validate"></div>
+              <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <!-- <div class="validate"></div> -->
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
+            </div> -->
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
@@ -854,6 +858,46 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo url('/'); ?>/public/index/assets/js/main.js"></script>
+<<<<<<< HEAD
+
+
+  <script>
+    $("#contactform").submit(function(e){
+      e.preventDefault();
+
+            
+      let name = $("#name").val();
+      console.log(name) ;
+      let email = $("#email").val();
+      console.log(email);
+      let subject = $("#subject").val();
+      console.log(subject);
+      let message = $("#message").val();
+      console.log(message);
+      let _token = $("input[name=_token]").val();
+
+      $.ajax({
+        url: "{{route('contactform.add')}}",
+        type:"POST",
+        data:{
+          name:name,
+          email:email,
+          subject:subject,
+          message:message,
+          _token:_token
+        },
+        success:function(response){
+                    
+          if (response) {
+            alert("Your Message has been sent ........! please check your email");
+            $("#contactform")[0].reset();
+          }
+        }
+      });
+    });
+  </script>
+=======
+>>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
 
 </body>
 

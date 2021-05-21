@@ -10,8 +10,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $getportfolio = Portfolio::orderBy('id')->get();
-        // dd($getportfolio);
-        // die();
+        
         return view('dashboard/portfolio',compact('getportfolio'));
     }
     public function addPortfolio(Request $request)
@@ -57,12 +56,12 @@ class PortfolioController extends Controller
     {
         $data = [];
         $portfolio = Portfolio::find($id);
-        $data['id'] = $portfolio->id;
-        $data['name'] = $portfolio->name;
-        $data['info'] = $portfolio->info;
-        $data['type'] = $portfolio->type;
-        $data['image'] = $portfolio->image;
-        // echo $data['name'];
+        // $data['id'] = $portfolio->id;
+        // $data['name'] = $portfolio->name;
+        // $data['info'] = $portfolio->info;
+        // $data['type'] = $portfolio->type;
+        // $data['image'] = $portfolio->image;
+        // // echo $data['name'];
         // echo $data['info'];
         // echo $data['image'];
         // dd($portfolio);
