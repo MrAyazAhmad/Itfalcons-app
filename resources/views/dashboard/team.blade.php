@@ -39,7 +39,7 @@
                           @foreach ($getteam as $team)
                             <tr id="tid{{$team->id}}">
                               <td>@php echo $count @endphp</td>
-                              <td><img src="<?php echo url('/'); ?>/public/image/team/{{$team->image}}" alt="{{$team->image}}" style="height:50px; width:100px"></td>
+                              <td><img src="{{URL::to('public/image/team')}}/{{$team->image}}" alt="{{$team->image}}" style="height:50px; width:100px"></td>
                               <td>{{$team->name}}</td>
                               <td>{{$team->designation}}</td>
                               <td>{{$team->fb}}</td>

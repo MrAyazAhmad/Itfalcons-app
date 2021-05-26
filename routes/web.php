@@ -10,6 +10,7 @@ use App\Http\Controllers\AboutIconController;
 use App\Http\Controllers\AboutVideoController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CustomLoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,8 @@ use App\Http\Controllers\ContactController;
 
 
 Route::get('/', [Controller::class,'getIndex']);
+Route::post('customlogin', [CustomLoginController::class,'authenticate']);
+// Route::get('login', [Controller::class,'getLogin']);
 /*route for sending email on form submission......*/
 Route::post('add-contactform',[ContactFormController::class,'addContactform'])->name('contactform.add');
 Route::get('contactform_detail',[ContactFormController::class,'index']);
@@ -36,7 +39,7 @@ Route::post('add_portfolio', [PortfolioController::class,'addPortfolio']);
 Route::get('portfolio', [PortfolioController::class,'index']);
 
 Route::get('dashboard', [Controller::class,'getDashboard']);
-Route::get('login', [Controller::class,'login']);
+// Route::get('login', [Controller::class,'login']);
 // Route::get('login', function () {
 //     return view('auth/login');
 // });
@@ -98,3 +101,11 @@ Route::get('videoDescriptions/{id}',[AboutVideoController::class,'getAboutDescri
 Route::get('details', function () {
     return view('portfolio-details');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

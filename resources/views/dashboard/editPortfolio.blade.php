@@ -31,7 +31,7 @@
               <div class="">
                 <label for="email">Image</label>
                 
-                <img src="<?php echo url('/'); ?>/public/image/portfolio/{{$portfolio->image}}" alt="">
+                <img src="{{URL::to('public/image/portfolio/{{$portfolio->image}}'')}}" alt="">
                 <input type="file" class="form-control" name="image" >
               </div>
               

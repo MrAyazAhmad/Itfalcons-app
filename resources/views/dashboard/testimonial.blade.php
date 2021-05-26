@@ -36,7 +36,7 @@
                           @foreach ($gettestimonial as $testimonial)
                             <tr id="tid{{$testimonial->id}}">
                               <td>@php echo $count @endphp</td>
-                              <td><img src="<?php echo url('/'); ?>/public/image/testimonial/{{$testimonial->image}}" alt="{{$testimonial->image}}" style="height:50px; width:100px"></td>
+                              <td><img src="{{URL::to('public/image/testimonial')}}/{{$testimonial->image}}" alt="{{$testimonial->image}}" style="height:50px; width:100px"></td>
                               <td>{{$testimonial->name}}</td>
                               <td>{{$testimonial->designation}}</td>
                               <td>{{$testimonial->description}}</td>

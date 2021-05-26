@@ -42,7 +42,7 @@
               </div>
               <div class="">
                 <label for="email">Image</label>
-                <img src="<?php echo url('/'); ?>/public/image/team/{{$team->image}}" alt="">
+                <img src="{{URL::to('public/image/team')}}/{{$team->image}}" alt="">
                 <input type="file" class="form-control" name="image" >
               </div>
               

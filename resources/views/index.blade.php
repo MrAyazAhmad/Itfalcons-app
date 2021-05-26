@@ -5,28 +5,28 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dewi Bootstrap Template - Index</title>
+  <title>IT Falcons - Index</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo url('/'); ?>/public/index/assets/img/favicon.png" rel="icon">
-  <link href="<?php echo url('/'); ?>/public/index/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{URL::to('public/index/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{URL::to('public/index/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="<?php echo url('/'); ?>/public/index/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/vendor/aos/aos.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?php echo url('/'); ?>/public/index/assets/css/style.css" rel="stylesheet">
+  <link href="{{URL::to('public/index/assets/css/style.css')}}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Dewi - v2.2.1
@@ -44,7 +44,7 @@
 
       <h1 class="logo"><a href="index.html">Dewi</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="<?php echo url('/'); ?>/public/index/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo"><img src="{{URL::to('public/index/assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -141,7 +141,7 @@
         <div class="row">
 
           <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/about.jpg')}}" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -176,7 +176,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
-              <img src="<?php echo url('/'); ?>/public/index/assets/img/about-boxes-1.jpg" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/about-boxes-1.jpg')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="ri-brush-4-line"></i>
               </div>
@@ -188,7 +188,7 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
-              <img src="<?php echo url('/'); ?>/public/index/assets/img/about-boxes-2.jpg" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/about-boxes-2.jpg')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="ri-calendar-check-line"></i>
               </div>
@@ -200,7 +200,7 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
-              <img src="<?php echo url('/'); ?>/public/index/assets/img/about-boxes-3.jpg" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/about-boxes-3.jpg')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="ri-movie-2-line"></i>
               </div>
@@ -222,27 +222,27 @@
         <div class="row">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-1.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-2.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-3.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-4.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-4.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-5.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-5.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/clients/client-6.png" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/clients/client-6.png')}}" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -302,7 +302,7 @@
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="<?php echo url('/'); ?>/public/index/assets/img/features-1.png" alt="" class="img-fluid">
+                <img src="{{URL::to('public/index/assets/img/features-1.png')}}" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="<?php echo url('/'); ?>/public/index/assets/img/features-2.png" alt="" class="img-fluid">
+                <img src="{{URL::to('public/index/assets/img/features-2.png')}}" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -351,7 +351,7 @@
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="<?php echo url('/'); ?>/public/index/assets/img/features-3.png" alt="" class="img-fluid">
+                <img src="{{URL::to('public/index/assets/img/features-3.png')}}" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -375,7 +375,7 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="<?php echo url('/'); ?>/public/index/assets/img/features-4.png" alt="" class="img-fluid">
+                <img src="{{URL::to('public/index/assets/img/features-4.png')}}" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -448,7 +448,7 @@
         <div class="owl-carousel testimonials-carousel">
 
           <div class="testimonial-item">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
             <h3>Saul Goodman</h3>
             <h4>Ceo &amp; Founder</h4>
             <p>
@@ -459,7 +459,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
             <h3>Sara Wilsson</h3>
             <h4>Designer</h4>
             <p>
@@ -470,7 +470,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
             <h3>Jena Karlis</h3>
             <h4>Store Owner</h4>
             <p>
@@ -481,7 +481,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
             <h3>Matt Brandon</h3>
             <h4>Freelancer</h4>
             <p>
@@ -492,7 +492,7 @@
           </div>
 
           <div class="testimonial-item">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
             <h3>John Larson</h3>
             <h4>Entrepreneur</h4>
             <p>
@@ -530,91 +530,91 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-1.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-2.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-3.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 2</h4>
               <p>App</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-3.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-4.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 2</h4>
               <p>Card</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-4.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-5.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-5.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-6.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-6.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-7.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-7.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-8.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-8.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-9.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <a href="<?php echo url('/'); ?>/public/index/assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-9.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
@@ -637,7 +637,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="pic"><img src="<?php echo url('/'); ?>/public/index/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Chief Executive Officer</span>
@@ -653,7 +653,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <div class="pic"><img src="<?php echo url('/'); ?>/public/index/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-2.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
                 <span>Product Manager</span>
@@ -669,7 +669,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <div class="pic"><img src="<?php echo url('/'); ?>/public/index/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>William Anderson</h4>
                 <span>CTO</span>
@@ -845,19 +845,19 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/php-email-form/validate.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/counterup/counterup.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?php echo url('/'); ?>/public/index/assets/vendor/aos/aos.js"></script>
+  <script src="{{URL::to('public/index/assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{URL::to('public/index/assets/vendor/aos/aos.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="<?php echo url('/'); ?>/public/index/assets/js/main.js"></script>
+  <script src="{{URL::to('public/index/assets/js/main.js')}}"></script>
 <<<<<<< HEAD
 
 
