@@ -8,6 +8,8 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutIconController;
 use App\Http\Controllers\AboutVideoController;
+use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
