@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class TestimonialController extends Controller
 {
+    //This function is used for authencation weather it is login pr not
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $gettestimonial = Testimonial::orderBy('id')->get();

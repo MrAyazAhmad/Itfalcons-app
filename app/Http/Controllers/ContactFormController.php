@@ -9,6 +9,10 @@ use App\Mail\ContactMail;
 
 class ContactFormController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
      public function addContactform(Request $request)
     {
     	$contactform = new ContactForms();

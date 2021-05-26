@@ -47,9 +47,9 @@ Route::get('dashboard', [Controller::class,'getDashboard']);
 // Route::get('/', function () {
 //     return view('index');
 // });
-Route::get('dashboard', function () {
-    return view('dashboard/dashboard');
-});
+// Route::get('dashboard', function () {
+//     return view('dashboard/dashboard');
+// });
 
 Route::get('portfolio', [PortfolioController::class,'index']);
 Route::post('add_portfolio', [PortfolioController::class,'addPortfolio']);
@@ -104,8 +104,7 @@ Route::get('details', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
