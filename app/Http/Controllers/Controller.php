@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\Contact;
+use Auth;
 
 class Controller extends BaseController
 {
@@ -17,9 +18,9 @@ class Controller extends BaseController
         return view('index')->with('getContact', Contact::all());
        
 	}
-	public function login()
+	public function getLogin()
 	{
-        return view('auth.login');
+        return view('auth/login');
        
 	}
      public function getDashboard()
