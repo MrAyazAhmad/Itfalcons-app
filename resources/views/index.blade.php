@@ -394,13 +394,15 @@
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="icofont-computer"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <a href="#">
+            <div class="col-md-6">
+              <div class="icon-box">
+                <i class="icofont-computer"></i>
+                <h4><a href="#">Lorem Ipsum</a></h4>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="icofont-chart-bar-graph"></i>
@@ -529,6 +531,17 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
+          @foreach ($getPortfolio as $portfolio)
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{$portfolio->type}}">
+              <img src="{{URL::to('public/image/portfolio')}}/{{$portfolio->image}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{$portfolio->name}}</h4>
+                <p>{{$portfolio->info}}</p>
+                <a href="{{URL::to('public/image/portfolio')}}/{{$portfolio->image}}" data-gall="portfolioGallery" class="venobox preview-link" title="{{$portfolio->name}}"><i class="bx bx-plus"></i></a>
+                <a href="portfolio_detail/{{$portfolio->id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          @endforeach
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">

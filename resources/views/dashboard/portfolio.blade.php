@@ -2,6 +2,7 @@
 
 
 @section('content')
+
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -10,6 +11,13 @@
                 <h4 class="text-center">Portfolio</h4> 
             </div>
             <div class="card-content">
+            @if (\Session::has('success'))
+              <div class="alert alert-success d-inline ml-2">
+                
+                  <strong>{!! \Session::get('success') !!}</strong>
+                
+              </div>
+            @endif
               <a href="#" class="btn btn-info d-inline float-right mr-3" data-toggle="modal" data-target="#portfolioModal">New Entry</a>
                 <div class="table-responsive overflow-hidden pl-2 pr-2">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
@@ -62,21 +70,53 @@
           <div class="modal-body">
             <form method="post" action="{{url('add_portfolio')}}" enctype="multipart/form-data" id="portfolioForm">
               @csrf
-              <div class="form-group">
+              <div class="row">
+              <div class="form-group col-md-6 col-sm-12">
                 <label for="firstname">Name</label>
                 <input type="text" class="form-control" id="name" name="name">
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6 col-sm-12">
                 <label for="lastname">Info</label>
                 <input type="text" class="form-control" id="name" name="info">
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Portfolio Type</label>
-                <input type="text" class="form-control" id="type" name="type">
+                <select name="type" id="getroleF" class="form-control" required>
+                  <option value="">none</option>
+                  <option value="web">web</option>
+                  <option value="car">card</option>
+                  <option value="app">app</option>
+                </select>
+                <!-- <input type="text" class="form-control" id="type" name="type"> -->
               </div>
-              <div class="">
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="email">Category Name</label>
+                <input type="text" class="form-control" id="category" name="category">
+              </div>
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="email">Client Name</label>
+                <input type="text" class="form-control" id="client" name="client">
+              </div>
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="email">Project Date</label>
+                <input type="date" class="form-control" id="date" name="project_date">
+              </div>
+              <div class="form-group  col-md-12">
+                <label for="email">Project URL</label>
+                <input type="text" class="form-control" id="url" name="project_url">
+              </div>
+              <div class="form-group  col-md-12">
+                <label for="email">Long Description</label>
+                <textarea name="description" id="description" class="form-control"></textarea>
+              </div>
+              <div class=" col-md-12">
                 <label for="email">Image</label>
                 <input type="file" class="form-control" id="image" name="image">
+              </div>
+              <div class=" col-md-12">
+                <label for="email">Sub Image</label>
+                <input type="file" class="form-control" id="image" name="image2[]" multiple>
+              </div>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -99,6 +139,15 @@
           },
           success:function(response){
             $('#pid'+id).remove();
+            swal({
+                title: "Success!",
+                text:  "Record has been deleted..",
+                type: "success",
+                timer: 3000,
+                showConfirmButton: false
+            });
+            window.setTimeout(function(){ } ,3000);
+            location.reload();
           }
         });
         }

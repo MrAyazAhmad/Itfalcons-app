@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PortfolioImageController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
@@ -24,6 +25,7 @@ use App\Http\Controllers\CustomLoginController;
 
 
 Route::get('/', [Controller::class,'getIndex']);
+Route::get('portfolio_detail/{id}', [Controller::class,'getPortfolioIndex']);
 Route::post('customlogin', [CustomLoginController::class,'authenticate']);
 // Route::get('login', [Controller::class,'getLogin']);
 /*route for sending email on form submission......*/
@@ -56,6 +58,12 @@ Route::post('add_portfolio', [PortfolioController::class,'addPortfolio']);
 Route::get('edit_portfolio/{id}',[PortfolioController::class,'getPortfolioById']);
 Route::post('update_portfolio/{id}', [PortfolioController::class,'updatePortfolio']);
 Route::delete('deleteportfolio/{id}',[PortfolioController::class,'deletePortfolio']);
+
+
+
+Route::post('update_portfolioImg', [PortfolioImageController::class,'updatePortfolioImg']);
+Route::get('edit_portfolioImg/{id}',[PortfolioImageController::class,'getPortfolioImgById']);
+Route::delete('deleteportfolioimg/{id}',[PortfolioImageController::class,'deletePortfolioImg']);
 
 
 

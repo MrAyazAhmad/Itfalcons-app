@@ -35,6 +35,7 @@ Coded by www.creative-tim.com
   <link href="{{URL::to('public/dashboard/assets/css/paper-dashboard.css')}}?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{URL::to('public/dashboard/assets/demo/demo.css')}}" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body class="">
