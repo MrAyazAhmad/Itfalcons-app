@@ -25,6 +25,7 @@ class ServiceController extends Controller
             'name' => 'required',
             'info' => 'required',
             'icon' => 'required',
+            'description' => 'required',
         ]);
         $input = $request->all();
         Service::create($input);
@@ -36,11 +37,13 @@ class ServiceController extends Controller
             'name' => 'required',
             'info' => 'required',
             'icon' => 'required',
+            'description' => 'required',
         ]);
         $service = Service::find($request->id);
         $service->name = $request->name;
         $service->info = $request->info;
         $service->icon = $request->icon;
+        $service->description = $request->description;
         
         $service->save();
         return redirect('service')->with('success','Service update successfully.');
