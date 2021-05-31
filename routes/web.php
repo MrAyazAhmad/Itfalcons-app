@@ -7,10 +7,12 @@ use App\Http\Controllers\PortfolioImageController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServiceTechController;
 use App\Http\Controllers\AboutIconController;
 use App\Http\Controllers\AboutVideoController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProjectReqController;
 use App\Http\Controllers\CustomLoginController;
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +91,20 @@ Route::get('edit_service/{id}',[ServiceController::class,'getServiceById']);
 Route::post('update_service/{id}', [ServiceController::class,'updateService']);
 Route::delete('deleteservice/{id}',[ServiceController::class,'deleteService']);
 
+Route::get('service_technology', [ServiceTechController::class,'getServiceTech']);
+Route::get('service_details/{id}', [Controller::class,'getServiceIndex']);
+Route::post('add_serviceTech', [ServiceTechController::class,'addServiceTech']);
+Route::delete('deleteservicetech/{id}',[ServiceTechController::class,'deleteServiceTech']);
+Route::get('edit_serviceTech/{id}',[ServiceTechController::class,'getServiceTechById']);
+Route::post('update_serviceTech/{id}', [ServiceTechController::class,'updateServiceTech']);
+
+
+Route::get('project_detail/{id}', [ServiceTechController::class,'projectDetail']);
+Route::post('detail_send', [ProjectReqController::class,'sendDetail']);
+
+
+
+
 
 Route::get('aboutIcon', [AboutIconController::class,'index']);
 Route::post('add_aboutIcon', [AboutIconController::class,'addAboutIcon']);
@@ -106,9 +122,9 @@ Route::get('videoDescriptions/{id}',[AboutVideoController::class,'getAboutDescri
 //     return view('dashboard/portfolio');
 // });
 
-Route::get('details', function () {
-    return view('portfolio-details');
-});
+// Route::get('project_detail', function () {
+//     return view('form');
+// });
 
 Auth::routes();
 

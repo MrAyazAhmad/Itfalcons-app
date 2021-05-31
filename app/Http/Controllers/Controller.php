@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\PortfolioImages;
+use App\Models\Service;
 use Auth;
 
 class Controller extends BaseController
@@ -17,7 +18,7 @@ class Controller extends BaseController
 
   	public function getIndex()
 	{
-        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all());
+        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all())->with('getService', Service::all());
        
 	}
 	public function getPortfolioIndex($id)
@@ -28,6 +29,14 @@ class Controller extends BaseController
         return view('portfolio-details')->with('getPortfolio', $portfolio)->with('getPortfolioImg', $portfolioImg);
        
 	}
+	public function getServiceIndex($id)
+	{
+        $service = Service::find($id);
+		
+        return view('inner-page')->with('getService', $service);
+       
+	}
+	
 	public function getLogin()
 	{
         return view('auth/login');

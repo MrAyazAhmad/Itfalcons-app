@@ -16,6 +16,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
   <!-- Vendor CSS Files -->
   <link href="{{URL::to('public/index/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{URL::to('public/index/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
@@ -394,50 +397,16 @@
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <a href="#">
+          @foreach ($getService as $service)
             <div class="col-md-6">
               <div class="icon-box">
-                <i class="icofont-computer"></i>
-                <h4><a href="#">Lorem Ipsum</a></h4>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <i class="{{$service->icon}}"></i>
+                <h4><a href="service_details/{{$service->id}}">{{$service->name}}</a></h4>
+                <p>{{$service->info}}</p>
               </div>
             </div>
-          </a>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-chart-bar-graph"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-image"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-settings"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-earth"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-tasks-alt"></i>
-              <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
+          @endforeach
+          
         </div>
 
       </div>
@@ -871,7 +840,6 @@
 
   <!-- Template Main JS File -->
   <script src="{{URL::to('public/index/assets/js/main.js')}}"></script>
-<<<<<<< HEAD
 
 
   <script>
@@ -909,8 +877,6 @@
       });
     });
   </script>
-=======
->>>>>>> c6e37869af1c3219f7cbc041b52dbf5ffc545766
 
 </body>
 

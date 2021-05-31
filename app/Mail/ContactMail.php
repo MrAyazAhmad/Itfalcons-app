@@ -30,6 +30,6 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Test Mail from Medilab Contact form')->view('dashboard.emails.ContactMail');
+        return $this->subject('Test Mail from ITFalcons')->view('dashboard.emails.ContactMail');
     }
 }
