@@ -139,6 +139,7 @@
           },
           success:function(response){
             $('#pid'+id).remove();
+            //SWEET ALERTS
             swal({
                 title: "Success!",
                 text:  "Record has been deleted..",

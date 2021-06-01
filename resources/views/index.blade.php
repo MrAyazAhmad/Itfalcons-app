@@ -511,7 +511,7 @@
               </div>
             </div>
           @endforeach
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="{{URL::to('public/index/assets/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 1</h4>
@@ -599,7 +599,7 @@
               <a href="{{URL::to('public/index/assets/img/portfolio/portfolio-9.jpg')}}" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
