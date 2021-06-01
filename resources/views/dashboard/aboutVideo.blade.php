@@ -17,7 +17,7 @@
                 
               </div>
             @endif
-              
+              <a href="addVideo" class="btn btn-info d-inline float-right mr-3" >New Entry</a>
                 <div class="table-responsive overflow-hidden pl-2 pr-2">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
@@ -27,6 +27,7 @@
                                 <th>Heading</th>
                                 <th>Descriptions</th>
                                 <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,6 +39,7 @@
                               <td>{{$about->heading}}</td>
                               <td><a href="javascript:void(0)" onclick="Description({{$about->id}})" class="btn btn-info">View</a></td>
                               <td><a href="edit_aboutVideo/{{$about->id}}" class="btn btn-info">Edit</a></td>
+                              <td><a href="javascript:void(0)" onclick="deleteAboutvideo({{$about->id}})" class="btn btn-danger">Delete</a></td>
                             </tr>
                             @php $count++ @endphp
                           @endforeach
@@ -110,5 +112,24 @@
       });
     }
   </script>
+
+    <script>
+      function deleteAboutvideo(id)
+      {
+        if (confirm("Do you really want to delete this record?")) 
+        {
+          $.ajax({
+          url: 'deleteaboutVideo/'+id,
+          type:"DELETE",
+          data:{
+            _token:$("input[name=_token]").val()
+          },
+          success:function(response){
+            $('#aid'+id).remove();
+          }
+        });
+        }
+      }
+    </script>
 
 @endsection

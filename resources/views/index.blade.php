@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{URL::to('public/index/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{URL::to('public/image/favicon.png')}}" rel="icon">
   <link href="{{URL::to('public/index/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -45,9 +45,9 @@
   <header id="header" class="fixed-top ">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Dewi</a></h1>
+      <h1 class="logo"><a href="index.html" class="logo"><img src="{{URL::to('public/image/logo.png')}}" alt="" class="img-fluid"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="{{URL::to('public/index/assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
+       <!-- <a href="index.html" class="logo"><img src="{{URL::to('public/image/logo.png')}}" alt="" class="img-fluid"></a> -->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -417,18 +417,21 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="owl-carousel testimonials-carousel">
+          @foreach ($getTestimonial as $Testimonial)
+
 
           <div class="testimonial-item">
-            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
+            <img src="{{URL::to('public/image/testimonial')}}/{{$Testimonial->image}}" class="testimonial-img" alt="">
+            <h3>{{$Testimonial->name}}</h3>
+            <h4>{{$Testimonial->designation}}</h4>
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              {{$Testimonial->description}}.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
           </div>
-
+          @endforeach
+<!-- 
           <div class="testimonial-item">
             <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
             <h3>Sara Wilsson</h3>
@@ -471,7 +474,7 @@
               Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-          </div>
+          </div> -->
 
         </div>
 
@@ -616,54 +619,27 @@
         </div>
 
         <div class="row">
+            @foreach ($getTeam as $Team)
+
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{URL::to('public/image/team/')}}/{{$Team->image}}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>{{$Team->name}}</h4>
+                <span>{{$Team->designation}}</span>
                 <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+                  <a href="{{$Team->fb}}"><i class="icofont-twitter"></i></a>
+                  <a href="{{$Team->twt}}"><i class="icofont-facebook"></i></a>
+                  <a href="{{$Team->inst}}"><i class="icofont-instagram"></i></a>
+                  <a href="{{$Team->lnkd}}"><i class="icofont-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
+          @endforeach
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-2.jpg')}}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="pic"><img src="{{URL::to('public/index/assets/img/team/team-3.jpg')}}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 
@@ -799,7 +775,8 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
+             <form method="post" action="{{url('subscriber')}}" enctype="multipart/form-data">
+              @csrf
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
@@ -818,7 +795,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://itfalcons.com/">ITFALCONS</a>
       </div>
     </div>
   </footer><!-- End Footer -->

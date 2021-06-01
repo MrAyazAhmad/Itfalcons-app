@@ -14,6 +14,7 @@ use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectReqController;
 use App\Http\Controllers\CustomLoginController;
+use App\Http\Controllers\SubscriberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -115,9 +116,17 @@ Route::delete('deleteaboutIcon/{id}',[AboutIconController::class,'deleteAboutIco
 
 
 Route::get('aboutVideo', [AboutVideoController::class,'index']);
+Route::get('addVideo', [AboutVideoController::class,'addAboutVideo']);
 Route::get('edit_aboutVideo/{id}',[AboutVideoController::class,'getAboutVideoById']);
+Route::post('createaboutVideo',[AboutVideoController::class,'createAboutVideo']);
 Route::post('update_aboutVideo/{id}', [AboutVideoController::class,'updateAboutVideo']);
 Route::get('videoDescriptions/{id}',[AboutVideoController::class,'getAboutDescriptionById']);
+Route::delete('deleteaboutVideo/{id}',[AboutVideoController::class,'deleteAboutVideo']);
+
+
+Route::post('subscriber', [SubscriberController::class,'subscriberuser']);
+
+
 // Route::get('portfolio', function () {
 //     return view('dashboard/portfolio');
 // });
