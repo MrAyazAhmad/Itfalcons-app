@@ -25,6 +25,13 @@ use App\Http\Controllers\SubscriberController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('command', function () {
+    Artisan::call('key:generate');
+    Artisan::call('cache:clear');
+    Artisan::call('config:cache');
+    dd("Done");
+});
+
 
 
 Route::get('/', [Controller::class,'getIndex']);

@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="{{URL::to('public/image/favicon.png')}}" rel="icon">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{URL::to('public/login/fonts/icomoon/style.css') }}">
@@ -16,7 +18,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="{{URL::to('public/login/css/style.css') }}">
 
-    <title>Login #3</title>
+    <title>ITFalcons | Login</title>
   </head>
   <body>
   
