@@ -56,6 +56,12 @@
               <p>Teams</p>
             </a>
           </li>
+           <li>
+            <a href="our_partners">
+              <i class="nc-icon nc-diamond"></i>
+              <p>Our Partners</p>
+            </a>
+          </li>
           <li>
           <li>
             <a href="portfolio">

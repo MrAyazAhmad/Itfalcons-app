@@ -12,6 +12,7 @@ use App\Models\PortfolioImages;
 use App\Models\Service;
 use App\Models\Team;
 use App\Models\Testimonial;
+use App\Models\Our_Partners;
 use Auth;
 
 class Controller extends BaseController
@@ -20,7 +21,7 @@ class Controller extends BaseController
 
   	public function getIndex()
 	{
-        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all())->with('getService', Service::all())->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all());
+        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all())->with('getService', Service::all())->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all())->with('getPartners', Our_Partners::all());
        
 	}
 	public function getPortfolioIndex($id)

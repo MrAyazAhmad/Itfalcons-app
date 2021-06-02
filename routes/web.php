@@ -15,6 +15,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProjectReqController;
 use App\Http\Controllers\CustomLoginController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\PartnersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,13 +76,17 @@ Route::post('update_portfolioImg', [PortfolioImageController::class,'updatePortf
 Route::get('edit_portfolioImg/{id}',[PortfolioImageController::class,'getPortfolioImgById']);
 Route::delete('deleteportfolioimg/{id}',[PortfolioImageController::class,'deletePortfolioImg']);
 
-
-
 Route::get('team', [TeamController::class,'index']);
 Route::post('add_team', [TeamController::class,'addTeam']);
 Route::get('edit_team/{id}',[TeamController::class,'getTeamById']);
 Route::post('update_team/{id}', [TeamController::class,'updateTeam']);
 Route::delete('deleteteam/{id}',[TeamController::class,'deleteTeam']);
+
+Route::get('our_partners', [PartnersController::class,'index']);
+Route::post('add_partner', [PartnersController::class,'addPartner']);
+Route::get('edit_partner/{id}',[PartnersController::class,'getPartnerById']);
+Route::post('update_partner/{id}', [PartnersController::class,'updatePartner']);
+Route::delete('deletepartner/{id}',[PartnersController::class,'deletePartner']);
 
 
 
