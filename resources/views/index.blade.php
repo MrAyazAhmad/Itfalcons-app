@@ -16,6 +16,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+  <!-- sweet alert cdn -->
+<link https="//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js /">
   
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -139,7 +141,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Our Mission</a></h5>
-                <p class="card-text">Our mission “Commitment to excellence” putting us in continuous efforts to take our company on higher notes. In this technological era, <span id="dots_vission" class="inline">...</span><span id="more_vission"  style="display: none;">everyone wants faster, effective and quicker solutions to cultivate their businesses. From consulting till the final outcome, our technical experts provide best solutions to stand out your business. Experienced strategic planners advise you creative and unique strategies and solutions to manage your business in efficient and profitable way.</span><a style="cursor: pointer; pointer; color: ##FF4A17; font-weight: bold;" id="vission" class="toggle_btn less"> &nbsp&nbsp read more</a></p>
+                <p class="card-text">Our mission “Commitment to excellence” putting us in continuous efforts to take our company on higher notes. In this technological era, <span id="dots_mission" class="inline">...</span><span id="more_mission"  style="display: none;">everyone wants faster, effective and quicker solutions to cultivate their businesses. From consulting till the final outcome, our technical experts provide best solutions to stand out your business. Experienced strategic planners advise you creative and unique strategies and solutions to manage your business in efficient and profitable way.</span><a style="cursor: pointer; pointer; color: ##FF4A17; font-weight: bold;" id="myBtn_mission" class="toggle_btn less" onclick="myFunctionMission()"> &nbsp&nbsp read more</a></p>
               </div>
             </div>
           </div>
@@ -151,7 +153,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Our Team</a></h5>
-                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better your company’s progress in efficient <span id="dots_team" >...</span><span id="more_team"  style="display: none;"> and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="team" class="toggle_btn less"> &nbsp&nbsp read more</a></p>
+                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better your company’s progress in efficient <span id="dots_team" >...</span><span id="more_team"  style="display: none;"> and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="myBtn_team" class="toggle_btn less" onclick="myFunctionTeam()"> &nbsp&nbsp read more</a></p>
               </div>
             </div>
           </div>
@@ -163,13 +165,64 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Trust</a></h5>
-                <p class="card-text">Our commitment is to ensure the quality of service offering and building trust through our approach of consistent engagement and <span id="dots_trust" class="inline">...</span><span id="more_trust"  style="display: none;"> feedback. </span><a style="cursor: pointer; pointer; color: ##FF4A17; font-weight: bold;" id="trust" class="toggle_btn less"> &nbsp&nbsp read more </p>
+                <p class="card-text">Our commitment is to ensure the quality of service offering and building trust through our approach of consistent engagement and <span id="dots_trust" class="inline">...</span><span id="more_trust"  style="display: none;"> feedback. </span><a style="cursor: pointer; pointer; color: ##FF4A17; font-weight: bold;" id="myBtn_trust" class="toggle_btn less" onclick="myFunctionTrust()"> &nbsp&nbsp read more </p>
               </div>
             </div>
           </div>
         </div>
 
       </div>
+      <script>
+function myFunctionMission() {
+  var dots = document.getElementById("dots_mission");
+  var moreText = document.getElementById("more_mission");
+  var btnText = document.getElementById("myBtn_mission");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunctionTeam() {
+  var dots = document.getElementById("dots_team");
+  var moreText = document.getElementById("more_team");
+  var btnText = document.getElementById("myBtn_team");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunctionTrust() {
+  var dots = document.getElementById("dots_trust");
+  var moreText = document.getElementById("more_trust");
+  var btnText = document.getElementById("myBtn_trust");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
     </section><!-- End About Boxes Section -->
 
     <!-- ======= Clients Section ======= -->

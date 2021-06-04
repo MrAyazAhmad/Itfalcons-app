@@ -15,6 +15,10 @@ class SubscriberController extends Controller
         $subscriber = New Subscriberuser();
         $subscriber->email = $request->email;
         $subscriber->save();
+
+
+
         return redirect('/')->with('success','You Subscribe successfully.');
+    
     }
 }
