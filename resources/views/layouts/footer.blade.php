@@ -52,7 +52,7 @@
             <p>ITFALCONS did a great job and accomplished on a short time</p>
              <form method="post" action="{{url('subscriber')}}" enctype="multipart/form-data">
               @csrf
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Subscribe" onclick="subscribeEmail()">
             </form>
 
           </div>
@@ -74,3 +74,23 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+
+
+   <script>
+      function subscribeEmail(id)
+      {
+        if (confirm("Are you sure to subscribe?")) 
+        {
+        
+            swal({
+                title: "Success!",
+                text:  "Subscribed successfully",
+                type: "success",
+                timer: 3000,
+                showConfirmButton: false
+            });
+            window.setTimeout(function(){ } ,3000);
+            location.reload();
+          }
+      }
+    </script>

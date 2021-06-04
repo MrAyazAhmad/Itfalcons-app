@@ -17,8 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- sweet alert cdn -->
-<link https="//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js /">
-  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <!-- Vendor CSS Files -->
@@ -35,10 +34,17 @@
 
 </head>
 
+
 <body>
 
 @include('layouts.nav')
-
+@if (\Session::has('success'))
+              <div class="alert alert-success d-inline ml-2">
+                
+                  <strong>{!! \Session::get('success') !!}</strong>
+                
+              </div>
+            @endif
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
