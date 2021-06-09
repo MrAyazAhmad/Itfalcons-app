@@ -651,36 +651,26 @@ function myFunctionTrust() {
         <p>Contact Us</p>
       </div>
 
+
+      
       <div class="row">
 
         <div class="col-lg-6">
-
-          <div class="row">
-            @foreach ($getContact as $Contact)
-            <div class="col-md-12">
-
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>Our Address</h3>
-                <p>{{$Contact->location}}</p>
+      @foreach ($getContactMap as $Contact)
+            <div class="row" id="cid{{$Contact->id}}">
+              <div class="col-lg-12 col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-warning">
+                    <h4 class="card-title">Map</h4>
+                    <p class="card-category" id="locationReload">{{$Contact->location}}</p>
+                  </div>
+                   <div class="card-body table-responsive">
+                    <iframe src="{{$Contact->mapp}}" style="width:100%"  height="212" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>    
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Us</h3>
-                <p>{{$Contact->email}}</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Us</h3>
-                <p>{{$Contact->phone}}</p>
-              </div>
-            </div>
-            @endforeach
           </div>
+          @endforeach
 
         </div>
 
