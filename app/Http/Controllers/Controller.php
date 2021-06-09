@@ -21,7 +21,7 @@ class Controller extends BaseController
 
   	public function getIndex()
 	{
-        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all())->with('getService', Service::all())->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all())->with('getPartners', Our_Partners::all());
+        return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::all())->with('getService', Service::all())->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all())->with('getPartners', Our_Partners::all())->with('getContactMap', Contact::all());
        
 	}
 	public function getPortfolioIndex($id)

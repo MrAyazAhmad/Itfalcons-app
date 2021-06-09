@@ -17,8 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- sweet alert cdn -->
-<link https="//cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js /">
-  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
   <!-- Vendor CSS Files -->
@@ -35,10 +34,17 @@
 
 </head>
 
+
 <body>
 
 @include('layouts.nav')
-
+@if (\Session::has('success'))
+              <div class="alert alert-success d-inline ml-2">
+                
+                  <strong>{!! \Session::get('success') !!}</strong>
+                
+              </div>
+            @endif
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -645,36 +651,26 @@ function myFunctionTrust() {
         <p>Contact Us</p>
       </div>
 
+
+      
       <div class="row">
 
         <div class="col-lg-6">
-
-          <div class="row">
-            @foreach ($getContact as $Contact)
-            <div class="col-md-12">
-
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>Our Address</h3>
-                <p>{{$Contact->location}}</p>
+      @foreach ($getContactMap as $Contact)
+            <div class="row" id="cid{{$Contact->id}}">
+              <div class="col-lg-12 col-md-12">
+                <div class="card">
+                  <div class="card-header card-header-warning">
+                    <h4 class="card-title">Map</h4>
+                    <p class="card-category" id="locationReload">{{$Contact->location}}</p>
+                  </div>
+                   <div class="card-body table-responsive">
+                    <iframe src="{{$Contact->mapp}}" style="width:100%"  height="212" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>    
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Us</h3>
-                <p>{{$Contact->email}}</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Us</h3>
-                <p>{{$Contact->phone}}</p>
-              </div>
-            </div>
-            @endforeach
           </div>
+          @endforeach
 
         </div>
 
