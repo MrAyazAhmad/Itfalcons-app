@@ -7,6 +7,7 @@ use App\Models\ContactForms;
 use Illuminate\Support\Facades\Mail; 
 use App\Mail\ContactMail;
 
+
 class ContactFormController extends Controller
 {
     public function __construct()
@@ -27,7 +28,9 @@ class ContactFormController extends Controller
         ];
 
         Mail::to($contactform->email)->send(new ContactMail($details));
-    	return response()->json($contactform);
+                return back()->with('success', 'submitted');
+
+    	//return response()->json($contactform);
          
     }
 
