@@ -40,7 +40,7 @@ Route::get('portfolio_detail/{id}', [Controller::class,'getPortfolioIndex']);
 Route::post('customlogin', [CustomLoginController::class,'authenticate']);
 // Route::get('login', [Controller::class,'getLogin']);
 /*route for sending email on form submission......*/
-Route::post('add-contactform',[ContactFormController::class,'addContactform'])->name('contactform.add');
+Route::post('add-contactform',[ContactFormController::class,'addContactform']);
 Route::get('contactform_detail',[ContactFormController::class,'index']);
 Route::get('contactforms/{id}',[ContactFormController::class,'getContactformById']);
 /*for editing dashbord googlemap*/

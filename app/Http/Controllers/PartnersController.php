@@ -50,7 +50,7 @@ class PartnersController extends Controller
             $partner->company_logo = "$partnerImage";
         }
         $partner->save();
-        return redirect('our_partners')->with('success','Team update successfully.');
+        return redirect('our_partners')->with('success','Partner update successfully.');
     }
 
      public function getPartnerById($id)
