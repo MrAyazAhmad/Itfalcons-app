@@ -15,7 +15,7 @@ class PartnersController extends Controller
     {
         $getpartner = Our_Partners::orderBy('id')->get();
         
-        return view('dashboard/our_partners',compact('getpartner'));
+        return view('dashboard/technologies',compact('getpartner'));
     }
 
      public function addPartner(Request $request)
@@ -34,7 +34,7 @@ class PartnersController extends Controller
         }
     
         Our_Partners::create($input);
-        return redirect('our_partners')->with('success','Partner created successfully.');
+        return redirect('technologies')->with('success','Technology created successfully.');
     }
     public function updatePartner(Request $request)
     {
@@ -50,7 +50,7 @@ class PartnersController extends Controller
             $partner->company_logo = "$partnerImage";
         }
         $partner->save();
-        return redirect('our_partners')->with('success','Partner update successfully.');
+        return redirect('technologies')->with('success','Technology update successfully.');
     }
 
      public function getPartnerById($id)

@@ -29,13 +29,13 @@
   <div class="wrapper ">
     <div class="sidebar" data-color="black" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="{{url('/')}}" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="{{URL::to('public/image/logo.png')}}">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="/" class="simple-text logo-normal">
+        <a href="{{url('/')}}" class="simple-text logo-normal">
           ITFalcons
           <!-- <div class="logo-image-big">
             <img src="{{URL::to('public/dashboard/assets/img/logo-big.png')}}">
@@ -57,9 +57,9 @@
             </a>
           </li>
            <li>
-            <a href="our_partners">
+            <a href="technologies">
               <i class="nc-icon nc-diamond"></i>
-              <p>Our Partners</p>
+              <p>Our Technologies</p>
             </a>
           </li>
           <li>
@@ -93,6 +93,7 @@
               <p>About Content</p>
             </a>
           </li>
+
             
           
  

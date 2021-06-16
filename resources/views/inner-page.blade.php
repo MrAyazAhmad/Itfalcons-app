@@ -43,7 +43,9 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Dewi</a></h1>
+      <!-- <h1 class="logo"><a href="index.html">Dewi</a></h1> -->
+      
+      <h1 class="logo"><a href="{{url('/')}}" class="logo"><img src="{{URL::to('public/image/logo.png')}}" alt="" class="img-fluid"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="{{URL::to('public/index/assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
@@ -81,10 +83,10 @@
     <section class="inner-page">
       <div class="container mt-2">
         <h2>
-          {{$getService->name}}
+          {{$getesrvicemain->name}}
         </h2>
-        <p>{{$getService->description}}</p>
-        <a href="../project_detail/{{$getService->id}}" class="btn btn-info">Get Started</a>
+        <p>{{$getesrvicemain->description}}</p>
+        <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a>
       </div>
     </section>
 

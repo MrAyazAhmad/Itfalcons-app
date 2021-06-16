@@ -80,6 +80,7 @@
               </div>
                 
                   <label for="email" class="col-12 text-center"><strong>Sub Images</strong></label>
+                 <input type="file" class="form-control" id="image" name="image2[]" multiple>
               <div class="row">
                 @foreach ($portfolioimg as $img)
                   <div class="col-6 text-center" id="pI_id{{$img->id}}">
@@ -96,7 +97,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
     
     <div class="modal fade" id="portfolioImageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
       <div class="modal-dialog" role="document">
