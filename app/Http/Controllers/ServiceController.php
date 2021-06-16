@@ -25,9 +25,20 @@ class ServiceController extends Controller
             'name' => 'required',
             'info' => 'required',
             'icon' => 'required',
+            'long_description'=>'required',
+            's_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'required',
         ]);
         $input = $request->all();
+           unset($input['s_image']);
+        $check ="";
+        if ($image = $request->file('s_image')) {
+            $destinationPath = 'public/image/service/';
+            $serviceImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $serviceImage);
+            $input['s_image'] = "$serviceImage";
+            $check = "$serviceImage";
+        }
         Service::create($input);
         return redirect('service')->with('success','Service created successfully.');
     }
@@ -37,16 +48,25 @@ class ServiceController extends Controller
             'name' => 'required',
             'info' => 'required',
             'icon' => 'required',
+            'long_description'=>'required',
+            's_image'=>'required',
             'description' => 'required',
         ]);
         $service = Service::find($request->id);
         $service->name = $request->name;
         $service->info = $request->info;
         $service->icon = $request->icon;
+        $service->long_description = $request->long_description;
+        $service->s_image = $request->s_image;
         $service->description = $request->description;
-        
+        if ($image = $request->file('s_image')) {
+            $destinationPath = 'public/image/service/';
+            $serviceImage = $image->getClientOriginalName();
+            $image->move($destinationPath, $serviceImage);
+            $service->s_image = "$serviceImage";
+        }
         $service->save();
-        return redirect('service')->with('success','Service update successfully.');
+        return redirect('service')->with('success','Service updated successfully.');
     }
     public function getServiceById($id)
     {

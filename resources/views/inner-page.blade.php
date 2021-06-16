@@ -89,8 +89,17 @@
       <div class="container mt-2">
         <h2>
           {{$getService->name}}
-        </h2>
-        <p>{{$getService->description}}</p>
+        </h2><br>
+      </div>
+      <div class="container mt-2">
+        <p>{{$getService->long_description}}</p>
+        <br>
+      </div>
+        <div class="container mt-2">
+          <img src="{{URL::to('public/image/service')}}/{{$getService->s_image}}" class="img-fluid" alt="">
+        </div>
+        <div class="container mt-2">
+        <p>{!!$getService->description!!}</p>
         <a href="../project_detail/{{$getService->id}}" class="btn btn-info">Get Started</a>
       </div>
     </section>
@@ -100,42 +109,7 @@
 <!-- summernote css/js -->
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-<!-- <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-2 mt-5">
-                <div class="card">
-                    <div class="card-header bg-info">
-                        <h6 class="text-white">Summernote Editor In Laravel</h6>
-                    </div>
-                    <div class="card-body">
-                        <form method="post" action="{{ route('books.store') }}" enctype="multipart/form-data">
-                            @csrf
-                            <div class="col-md-12 form-group">
-                                <label>Name</label>
-                                <input type="text" name="name" class="form-control"/>
-                            </div>  
-                            <div class="col-md-12 form-group">
-                                <label>Author Name</label>
-                                <input type="text" name="auther_name" class="form-control"/>
-                            </div>
-                            <div class=" col-md-12 form-group ">
-                              <label>Message</label>
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message1" required></textarea>
-                            </div>
-                            <div class="form-group text-center">
-                                <button type="submit" class="btn btn-success btn-sm">Save</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(document).ready(function() {
-          $('.summernote').summernote();
-        });
-    </script> -->
+
 
   </main><!-- End #main -->
 
