@@ -18,6 +18,9 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
   <!-- sweet alert cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -40,18 +43,30 @@
 
 @include('layouts.nav')
 @if (\Session::has('success'))
-              <div class="alert alert-success d-inline ml-2">
-                
-                  <strong>{!! \Session::get('success') !!}</strong>
-                
-              </div>
+     <script>
+                                        Swal.fire ({
+                                            title: "Thanks for Contact Us ",
+                                            html: "<ul class='alert-font-size'> <li class='text-left'>Check Your Email</li> <li class='text-left'>Received Your Massage We Will Contact You Soon</li> <p class='text-center'>Thank You</p><ul>",
+                                            icon: "success"
+                                        });
+                                    </script>
+            @endif
+
+            @if (\Session::has('subscribe'))
+     <script>
+                                        Swal.fire ({
+                                            title: "Thanks for Support ",
+                                            html: " <p class='text-center'>You Subscribed Now</p>",
+                                            icon: "success"
+                                        });
+                                    </script>
             @endif
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Plan. Launch. Grow.</h1>
-      <h2>We are team of talented designers making websites with Passion</h2>
+      <h2>Build or Scale up your Business By Our ExpertTeam</h2>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
@@ -113,18 +128,17 @@
           </div>
 
           <div class="col-lg-6 pt-3 pt-lg-0 content">
-            <h3>Build or Scale up your Business By Our ExpertTeam</h3>
-            <br><br><br>
-            <!-- <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            <h3>Build or Scale up your Business <br>By Our ExpertTeam</h3>
+            <br>
+            <p class="font-italic">
+              Our solutions are “Brilliantly Built” because they have our customers at the center. Backed by fanatical support, in depth expertise of consultants. We deliver lifestyle, not just solutions.
             </p>
             <ul>
               <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
               <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
               <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li>
               <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul> -->
+            </ul>
             <p>
              Our commitment is to ensure the quality of service through offering consistent engagements.
             </p>
@@ -142,7 +156,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
-              <img src="{{URL::to('public/index/assets/img/about-boxes-1.jpg')}}" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/mission.png')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="fa fa-star"></i>
               </div>
@@ -154,7 +168,7 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
-              <img src="{{URL::to('public/index/assets/img/about-boxes-2.jpg')}}" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/team1.png')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="fa fa-users"></i>
               </div>
@@ -166,7 +180,7 @@
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
-              <img src="{{URL::to('public/index/assets/img/about-boxes-3.jpg')}}" class="card-img-top" alt="...">
+              <img src="{{URL::to('public/index/assets/img/trust1.png')}}" class="card-img-top" alt="...">
               <div class="card-icon">
                 <i class="ri-movie-2-line"></i>
               </div>
@@ -660,6 +674,7 @@ function myFunctionTrust() {
       @foreach ($getContactMap as $Contact)
             <div class="row" id="cid{{$Contact->id}}">
               <div class="col-lg-12 col-md-12">
+<!-- <<<<<<< HEAD
                 <div class="card">
                   <div class="card-header card-header-warning">
                     <h4 class="card-title">Map</h4>
@@ -668,7 +683,18 @@ function myFunctionTrust() {
                    <div class="card-body table-responsive">
                     <iframe src="{{$Contact->mapp}}" style="width:100%"  height="230" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   </div>
-                </div>    
+                </div>     -->
+
+                <!-- <div class="card"> -->
+                  <!-- <div class="card-header card-header-warning"> -->
+                    <!-- <h4 class="card-title">Map</h4> -->
+                    <!-- <p class="card-category" id="locationReload">{{$Contact->location}}</p> -->
+                  <!-- </div> -->
+                   <!-- <div class="card-body table-responsive"> -->
+                    <iframe src="{{$Contact->mapp}}" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- </div> -->
+                <!-- </div>     -->
+
               </div>
           </div>
           @endforeach
@@ -676,21 +702,33 @@ function myFunctionTrust() {
         </div>
 
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <form method="post"  role="form" class="php-email-form" enctype="" action="{{ route('contactform.add') }}" >
-            @csrf
-            <!-- id="contactform" i have deleted this id from form tag to check form without ajax -->
+
+          <!-- <form method="post"  role="form" class="php-email-form" enctype="" action="{{ route('contactform.add') }}" >
+            @csrf -->
+            <!-- id="contactform" i have deleted this id from form tag to check form without ajax
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name1" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email1" placeholder="Your Email" required>
-                </div>
+                </div> -->
+
+            <form  action="{{url('add-contactform')}}" method="POST" enctype="multipart/form-data" class="php-email-form" id="form1" enctype='multipart/form-data'>
+                        @csrf
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+
               </div>
-              <div class="form-group mt-3">
+              <div class="col-md-6 form-group ">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+              <div class="col-md-12 form-group ">
                 <input type="text" class="form-control" name="subject" id="subject1" placeholder="Subject" required>
               </div>
-              <div class="form-group mt-3">
+              <div class=" col-md-12 form-group ">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message1" required></textarea>
               </div>
               <!-- <div class="my-3">
@@ -698,7 +736,8 @@ function myFunctionTrust() {
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div> -->
-              <div class="text-center"><button type="submit" >Send Message</button></div>
+              <div class="text-center pt-3 "><button type="submit" >Send Message</button></div>
+            </div>
             </form>
         </div>
 
@@ -718,7 +757,7 @@ function myFunctionTrust() {
   <script src="{{URL::to('public/index/assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{URL::to('public/index/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{URL::to('public/index/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{URL::to('public/index/assets/vendor/php-email-form/validate.js')}}"></script>
+  <!-- <script src="{{URL::to('public/index/assets/vendor/php-email-form/validate.js')}}"></script> -->
   <script src="{{URL::to('public/index/assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
   <script src="{{URL::to('public/index/assets/vendor/counterup/counterup.min.js')}}"></script>
   <script src="{{URL::to('public/index/assets/vendor/venobox/venobox.min.js')}}"></script>
@@ -746,7 +785,6 @@ function myFunctionTrust() {
       let _token = $("input[name=_token]").val();
 
       $.ajax({
-        url: "{{route('contactform.add')}}",
         type:"POST",
         data:{
           name:name,
