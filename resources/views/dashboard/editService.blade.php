@@ -30,8 +30,24 @@
                 <input type="text" class="form-control" name="info" value="{{$service->info}}">
               </div>
               <div class="form-group">
+                <label for="lastname">Long description</label>
+                <input type="text" class="form-control" name="long_description" value="{{$service->long_description}}">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Service Image</label>
+                <br>
+                  <img src="{{URL::to('public/image/service')}}/{{$service->s_image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
+                <input type="file" class="form-control" name="s_image" >
+              </div>
+
+
+
+
+
+
+              <div class="form-group">
                 <label for="lastname">Description</label>
-                <textarea name="description" class="form-control">{{$service->description}}</textarea>
+                <textarea name="description" class="form-control">{!!$service->description!!}</textarea>
                 <!-- <input type="text" class="form-control" name="description" value="{{$service->description}}"> -->
               </div>          
               <button type="submit" class="btn btn-primary">Submit</button>

@@ -28,6 +28,11 @@
 
   <!-- Template Main CSS File -->
   <link href="{{URL::to('public/index/assets/css/style.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Dewi - v2.2.1
@@ -35,6 +40,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 </head>
 
 <body>
@@ -83,12 +90,29 @@
     <section class="inner-page">
       <div class="container mt-2">
         <h2>
+
           {{$getesrvicemain->name}}
-        </h2>
-        <p>{{$getesrvicemain->description}}</p>
+        </h2><br>
+      </div>
+      <div class="container mt-2">
+        <p>{{$getesrvicemain->long_description}}</p>
+        <br>
+      </div>
+        <div class="container mt-2">
+          <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="img-fluid" alt="">
+        </div>
+        <div class="container mt-2">
+        <p>{!!$getesrvicemain->description!!}</p>
         <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a>
       </div>
     </section>
+
+
+
+<!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
 
   </main><!-- End #main -->
 

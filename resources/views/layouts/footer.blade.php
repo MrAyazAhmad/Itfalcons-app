@@ -81,7 +81,7 @@
       function subscribeEmail(id)
       {
         if (confirm("Are you sure to subscribe?")) 
-        {
+        
         
             swal({
                 title: "Success!",

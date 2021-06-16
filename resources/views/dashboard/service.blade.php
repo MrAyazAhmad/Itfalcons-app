@@ -28,6 +28,7 @@
                                 <th>Name</th>
                                 <th>Short Info</th>
                                 <th>Description</th>
+                                 <th>Image</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -40,7 +41,8 @@
                               <td><span class="{{$service->icon}}"></span></td>
                               <td>{{$service->name}}</td>
                               <td>{{$service->info}}</td>
-                              <td>{{$service->description}}</td>
+                              <td>{!!$service->description!!}</td>
+                              <td><img src="{{URL::to('public/image/service')}}/{{$service->s_image}}" alt="{{$service->s_image}}" style="height:50px; width:100px"></td>
                               <td><a href="edit_service/{{$service->id}}" class="btn btn-info">Edit</a></td>
                               <td><a href="javascript:void(0)" onclick="deleteService({{$service->id}})" class="btn btn-danger">Delete</a></td>
                             </tr>
@@ -81,6 +83,14 @@
                 <input type="text" class="form-control" id="info" name="info">
               </div>
               <div class="form-group">
+                <label for="long_description">Long Description</label>
+                <textarea name="long_description" id="long_description" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" class="form-control" id="s_image" name="s_image">
+              </div>
+              <div class="form-group">
                 <label for="email">Description</label>
                 <textarea name="description" class="form-control" id="description"></textarea>
               </div>
@@ -91,6 +101,14 @@
         </div>
       </div>
     </div>
+    <!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script type="text/javascript">
+    $('#description').summernote({
+        height: 400
+    });
+</script>
 
     
     <script>

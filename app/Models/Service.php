@@ -11,5 +11,5 @@ class Service extends Model
 
     protected $table = "services";
 
-    protected $fillable = ["icon","name","info","description"];
+    protected $fillable = ["icon","name","info","long_description","s_image","description"];
 }

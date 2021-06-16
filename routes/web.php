@@ -16,6 +16,8 @@ use App\Http\Controllers\ProjectReqController;
 use App\Http\Controllers\CustomLoginController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\PartnersController;
+use App\Http\Controllers\BookController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,7 +42,7 @@ Route::get('portfolio_detail/{id}', [Controller::class,'getPortfolioIndex']);
 Route::post('customlogin', [CustomLoginController::class,'authenticate']);
 // Route::get('login', [Controller::class,'getLogin']);
 /*route for sending email on form submission......*/
-Route::post('add-contactform',[ContactFormController::class,'addContactform']);
+Route::post('add-contactform',[ContactFormController::class,'addContactform'])->name('contactform.add');
 Route::get('contactform_detail',[ContactFormController::class,'index']);
 Route::get('contactforms/{id}',[ContactFormController::class,'getContactformById']);
 /*for editing dashbord googlemap*/
@@ -139,6 +141,12 @@ Route::delete('deleteaboutVideo/{id}',[AboutVideoController::class,'deleteAboutV
 Route::post('subscriber', [SubscriberController::class,'subscriberuser']);
 
 
+/*summernote book
+*/
+/*Route::get('books','BookController@index');*/
+Route::post('books',[BookController::class,'store'])->name('books.store');
+/*Route::get('books/{id}',BookController::class,'show')->name('books.show');
+*/
 // Route::get('portfolio', function () {
 //     return view('dashboard/portfolio');
 // });

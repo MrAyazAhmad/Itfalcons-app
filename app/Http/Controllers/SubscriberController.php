@@ -20,7 +20,7 @@ class SubscriberController extends Controller
                 return redirect()->back();*/
 
 
-        return redirect()->back()->with('success','You Subscribed successfully.....');
+        return redirect()->back()->with('subscribe','You Subscribed successfully.....');
     
     }
 }
