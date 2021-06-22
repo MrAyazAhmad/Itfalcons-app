@@ -14,6 +14,7 @@ class PortfolioController extends Controller
     }
     public function index()
     {
+
         $getportfolio = Portfolio::orderBy('id')->get();
         
         return view('dashboard/portfolio',compact('getportfolio'));
@@ -84,6 +85,17 @@ class PortfolioController extends Controller
             $profileImage = $image->getClientOriginalName();
             $image->move($destinationPath, $profileImage);
             $portfolio->image = "$profileImage";
+        }
+                if ($image2 = $request->file('image2')) {
+            foreach($image2 as $images) {
+                $portfolioImg = new PortfolioImages();
+                $destinationPath = 'public/image/portfolio/';
+                $profileImage = $images->getClientOriginalName();
+                $images->move($destinationPath, $profileImage);
+                $portfolioImg->portfolio_img = "$profileImage";
+                $portfolioImg->portfolio_id = $portfolio->id;
+                $portfolioImg->save();
+            }
         }
         $portfolio->save();
         return redirect('portfolio')->with('success','Portfolio update successfully.');

@@ -84,11 +84,11 @@ Route::get('edit_team/{id}',[TeamController::class,'getTeamById']);
 Route::post('update_team/{id}', [TeamController::class,'updateTeam']);
 Route::delete('deleteteam/{id}',[TeamController::class,'deleteTeam']);
 
-Route::get('our_partners', [PartnersController::class,'index']);
-Route::post('add_partner', [PartnersController::class,'addPartner']);
-Route::get('edit_partner/{id}',[PartnersController::class,'getPartnerById']);
-Route::post('update_partner/{id}', [PartnersController::class,'updatePartner']);
-Route::delete('deletepartner/{id}',[PartnersController::class,'deletePartner']);
+Route::get('technologies', [PartnersController::class,'index']);
+Route::post('add_technology', [PartnersController::class,'addPartner']);
+Route::get('edit_technology/{id}',[PartnersController::class,'getPartnerById']);
+Route::post('update_technology/{id}', [PartnersController::class,'updatePartner']);
+Route::delete('deletetechnology/{id}',[PartnersController::class,'deletePartner']);
 
 
 
