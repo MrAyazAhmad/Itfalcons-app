@@ -68,7 +68,9 @@
 
     </div>
   </header><!-- End Header -->
-
+   <section id="hero" style="background:url('{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}'); width: 100%;height: 100vh;background-size: cover;position: relative;padding: 0;background-repeat: no-repeat;">
+   
+    </section>
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -86,6 +88,7 @@
       </div>
     </section> -->
     <!-- End Breadcrumbs -->
+    
 
     <section class="inner-page">
       <div class="container mt-2">
@@ -98,9 +101,9 @@
         <p>{{$getesrvicemain->long_description}}</p>
         <br>
       </div>
-        <div class="container mt-2">
+        <!-- <div class="container mt-2">
           <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="img-fluid" alt="">
-        </div>
+        </div> -->
         <div class="container mt-2">
         <p>{!!$getesrvicemain->description!!}</p>
         <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a>
