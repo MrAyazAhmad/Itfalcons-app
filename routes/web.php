@@ -59,9 +59,9 @@ Route::get('dashboard', [Controller::class,'getDashboard']);
 //     return view('auth/login');
 // });
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('cryptocurrency', function () {
+    return view('crypto');
+});
 // Route::get('dashboard', function () {
 //     return view('dashboard/dashboard');
 // });

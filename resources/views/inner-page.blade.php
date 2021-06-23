@@ -42,6 +42,17 @@
   ======================================================== -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<style type="text/css">
+  #hero {
+    width: 100% !important;
+    height: 100vh !important;
+    background: url({{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}) top center !important;
+    background-size: cover !important;
+    position: relative !important;
+    padding: 0 !important;
+}
+
+</style>
 </head>
 
 <body>
@@ -58,28 +69,40 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="../">Home</a></li>
+          <li><a href="../">Back Home</a></li>
           
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="../project_detail/{{$getesrvicemain->id}}" class="get-started-btn scrollto">Get Quote</a>
 
     </div>
   </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+      <h1>{{$getesrvicemain->name}}</h1>
+      <!-- <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <div class="d-flex">
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+      </div> -->
+    </div>
+  </section><!-- End Hero -->
+
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <!-- <section class="breadcrumbs">
+   <!--  <section class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>{{$getesrvicemain->name}}</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
+            <li><a href="../">Home</a></li>
+            <li>{{$getesrvicemain->name}}</li>
           </ol>
         </div>
 
@@ -103,7 +126,7 @@
         </div>
         <div class="container mt-2">
         <p>{!!$getesrvicemain->description!!}</p>
-        <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a>
+        <!-- <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a> -->
       </div>
     </section>
 

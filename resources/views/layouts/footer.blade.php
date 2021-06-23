@@ -43,7 +43,7 @@
             @foreach ($getService as $service)
 
 
-              <li><i class="bx bx-chevron-right"></i> <a href="service_details/{{$service->id}}">{{$service->name}}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url('/service_details')}}/{{$service->id}}">{{$service->name}}</a></li>
             @endforeach
             </ul>
           </div>
@@ -93,5 +93,4 @@
             window.setTimeout(function(){ } ,3000);
             location.reload();
           }
-      }
     </script>

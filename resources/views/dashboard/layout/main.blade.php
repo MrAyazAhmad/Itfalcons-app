@@ -58,38 +58,38 @@
           </li>
           <li>
             <a href="team">
-              <i class="nc-icon nc-diamond"></i>
+              <i class="nc-icon nc-badge"></i>
               <p>Teams</p>
             </a>
           </li>
            <li>
             <a href="technologies">
-              <i class="nc-icon nc-diamond"></i>
+              <i class="nc-icon nc-html5"></i>
               <p>Our Technologies</p>
             </a>
           </li>
           <li>
           <li>
             <a href="portfolio">
-              <i class="nc-icon nc-bell-55"></i>
+              <i class="nc-icon nc-album-2"></i>
               <p>Portfolio</p>
             </a>
           </li>
           <li>
             <a href="service">
-              <i class="nc-icon nc-bell-55"></i>
+              <i class="nc-icon nc-atom"></i>
               <p>Service</p>
             </a>
           </li>
           <li>
             <a href="testimonial">
-              <i class="nc-icon nc-bell-55"></i>
+              <i class="nc-icon nc-ruler-pencil"></i>
               <p>Testimonial</p>
             </a>
           </li>
           <li>
             <a href="aboutIcon">
-              <i class="nc-icon nc-bell-55"></i>
+              <i class="nc-icon nc-paper"></i>
               <p>About Icon</p>
             </a>
           </li>

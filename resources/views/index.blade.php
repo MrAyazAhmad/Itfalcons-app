@@ -46,7 +46,7 @@
      <script>
                                         Swal.fire ({
                                             title: "Thanks for Contact Us ",
-                                            html: "<ul class='alert-font-size'> <li class='text-left'>Check Your Email</li> <li class='text-left'>Received Your Massage We Will Contact You Soon</li> <p class='text-center'>Thank You</p><ul>",
+                                            html: "<ul class='alert-font-size'> <li class='text-left'>Check Your Email</li> <li class='text-left'>Received Your Message We Will Contact You Soon</li><ul>",
                                             icon: "success"
                                         });
                                     </script>
@@ -71,8 +71,8 @@
       <h1>Plan. Launch. Grow.</h1>
       <h2>Build or Scale up your Business By Our ExpertTeam</h2>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+        <a href="#about" class="btn-get-started scrollto">Let's Begin</a>
+        <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a> -->
       </div>
     </div>
   </section><!-- End Hero -->
@@ -177,7 +177,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Our Team</a></h5>
-                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better your company’s progress in efficient <span id="dots_team" >...</span><span id="more_team"  style="display: none;"> and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="myBtn_team" class="toggle_btn less" onclick="myFunctionTeam()"> &nbsp&nbsp read more</a></p>
+                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better <span id="dots_team" >...</span><span id="more_team"  style="display: none;">your company’s progress in efficient  and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="myBtn_team" class="toggle_btn less" onclick="myFunctionTeam()"> &nbsp&nbsp read more</a></p>
               </div>
             </div>
           </div>
@@ -203,9 +203,11 @@
   if (x.style.display === "none") {
     x.style.display = "block";
     btnText.innerHTML = "See Less"; 
+
   } else {
     x.style.display = "none";
     btnText.innerHTML = "See More"; 
+    document.getElementById("portfolio").scrollIntoView({behavior: 'smooth'});
 
   }
 }
@@ -432,7 +434,13 @@ function myFunctionTrust() {
               </div>
             </div>
           @endforeach
-          
+          <div class="col-md-6">
+              <div class="icon-box">
+                <i class="fab fa-btc"></i>
+                <h4><a href="{{url('/cryptocurrency')}}">Crypto Currency</a></h4>
+                <p>Crypto Currency</p>
+              </div>
+            </div>
         </div>
 
       </div>
