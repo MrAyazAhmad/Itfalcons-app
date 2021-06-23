@@ -650,7 +650,7 @@ function myFunctionTrust() {
                     <!-- <p class="card-category" id="locationReload">{{$Contact->location}}</p> -->
                   <!-- </div> -->
                    <!-- <div class="card-body table-responsive"> -->
-                    <iframe src="{{$Contact->mapp}}" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.132967979645!2d74.37454781448217!3d31.493028755644133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905fbc3136747%3A0x9c2c1b783238ca17!2sITFalcons!5e0!3m2!1sen!2s!4v1624001262179!5m2!1sen!2s" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   <!-- </div> -->
                 <!-- </div>     -->
 
