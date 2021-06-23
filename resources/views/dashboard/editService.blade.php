@@ -17,7 +17,7 @@
               
               <input type="hidden" name="id" id="id" value="{{$service->id}}">
               <div class="form-group">
-                <label for="email">Icon</label>
+                 <label for="email">Icon</label>
                 <span class="{{$service->icon}}"></span>
                 <input type="text" class="form-control" name="icon" value="{{$service->icon}}">
               </div>
@@ -47,7 +47,9 @@
 
               <div class="form-group">
                 <label for="lastname">Description</label>
-                <textarea name="description" class="form-control">{!!$service->description!!}</textarea>
+                <textarea name="description" class="form-control" id="description">{!!$service->description!!}</textarea>
+
+                <!-- <textarea name="description" class="form-control">{!!$service->description!!}</textarea> -->
                 <!-- <input type="text" class="form-control" name="description" value="{{$service->description}}"> -->
               </div>          
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -57,4 +59,12 @@
         </div>
       </div>
     </div>
+    <!-- summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script type="text/javascript">
+    $('#description').summernote({
+        height: 400
+    });
+</script>
 @endsection

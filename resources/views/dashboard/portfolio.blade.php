@@ -73,15 +73,35 @@
               <div class="row">
               <div class="form-group col-md-6 col-sm-12">
                 <label for="firstname">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
+
+                <!-- Show error -->
+                @error('name')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="lastname">Info</label>
-                <input type="text" class="form-control" id="name" name="info">
+                <input type="text" class="form-control @error('info') is-invalid @enderror" id="name" name="info">
+
+                <!-- Show error -->
+                @error('info')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Portfolio Type</label>
-                <select name="type" id="getroleF" class="form-control" required>
+                <select name="type" id="getroleF" class="form-control @error('type') is-invalid @enderror " required>
+                  <!-- Show error -->
+                @error('type')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
                   <option value="">none</option>
                   <option value="web">web</option>
                   <option value="car">card</option>
@@ -91,31 +111,78 @@
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Category Name</label>
-                <input type="text" class="form-control" id="category" name="category">
+                <input type="text" class="form-control @error('category') is-invalid @enderror" id="category" name="category">
+                <!-- Show error -->
+                @error('category')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Client Name</label>
-                <input type="text" class="form-control" id="client" name="client">
+                <input type="text" class="form-control @error('client') is-invalid @enderror" id="client" name="client">
+
+                <!-- Show error -->
+                @error('client')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Project Date</label>
-                <input type="date" class="form-control" id="date" name="project_date">
+                <input type="date" class="form-control @error('project_date') is-invalid @enderror" id="date" name="project_date">
+
+                <!-- Show error -->
+                @error('project_date')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group  col-md-12">
                 <label for="email">Project URL</label>
-                <input type="text" class="form-control" id="url" name="project_url">
+                <input type="text" class="form-control @error('project_url') is-invalid @enderror" id="url" name="project_url">
+                <!-- Show error -->
+                @error('project_url')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group  col-md-12">
                 <label for="email">Long Description</label>
-                <textarea name="description" id="description" class="form-control"></textarea>
+                <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror"></textarea>
+                <!-- Show error -->
+                @error('description')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class=" col-md-12">
                 <label for="email">Image</label>
-                <input type="file" class="form-control" id="image" name="image">
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+
+                <!-- Show error -->
+                @error('image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class=" col-md-12">
                 <label for="email">Sub Image</label>
-                <input type="file" class="form-control" id="image" name="image2[]" multiple>
+                <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image" name="image2[]" multiple>
+
+
+                 <!-- Show error -->
+                @error('image2')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>

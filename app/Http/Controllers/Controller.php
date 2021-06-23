@@ -42,6 +42,7 @@ class Controller extends BaseController
 	public function getServiceIndex($id)
 	{
         $service = Service::find($id);
+
         // $getService = Service::all();
 		
         return view('inner-page')->with('getesrvicemain', $service)->with('getService', Service::all());

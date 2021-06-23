@@ -49,7 +49,6 @@ class ServiceController extends Controller
             'info' => 'required',
             'icon' => 'required',
             'long_description'=>'required',
-            's_image'=>'required',
             'description' => 'required',
         ]);
         $service = Service::find($request->id);

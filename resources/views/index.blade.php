@@ -46,7 +46,7 @@
      <script>
                                         Swal.fire ({
                                             title: "Thanks for Contact Us ",
-                                            html: "<ul class='alert-font-size'> <li class='text-left'>Check Your Email</li> <li class='text-left'>Received Your Massage We Will Contact You Soon</li> <p class='text-center'>Thank You</p><ul>",
+                                            html: "<ul class='alert-font-size'> <li class='text-left'>Check Your Email</li> <li class='text-left'>Received Your Message We Will Contact You Soon</li><ul>",
                                             icon: "success"
                                         });
                                     </script>
@@ -71,8 +71,8 @@
       <h1>Plan. Launch. Grow.</h1>
       <h2>Build or Scale up your Business By Our ExpertTeam</h2>
       <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+        <a href="#about" class="btn-get-started scrollto">Let's Begin</a>
+      
       </div>
     </div>
   </section><!-- End Hero -->
@@ -177,7 +177,7 @@
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">Our Team</a></h5>
-                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better your company’s progress in efficient <span id="dots_team" >...</span><span id="more_team"  style="display: none;"> and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="myBtn_team" class="toggle_btn less" onclick="myFunctionTeam()"> &nbsp&nbsp read more</a></p>
+                <p class="card-text">IT Falcons consulting team is well-experienced and passionate to advise you what and how to use technology to better <span id="dots_team" >...</span><span id="more_team"  style="display: none;">your company’s progress in efficient  and productive way. Our team not only advise but also planes, design and install IT systems for their clients. We are working with industries and on commercial level to provide help and advice about their business and IT problems. </span><a style="cursor: pointer; color: #FF4A17; font-weight: bold;" id="myBtn_team" class="toggle_btn less" onclick="myFunctionTeam()"> &nbsp&nbsp read more</a></p>
               </div>
             </div>
           </div>
@@ -203,9 +203,11 @@
   if (x.style.display === "none") {
     x.style.display = "block";
     btnText.innerHTML = "See Less"; 
+
   } else {
     x.style.display = "none";
     btnText.innerHTML = "See More"; 
+    document.getElementById("portfolio").scrollIntoView({behavior: 'smooth'});
 
   }
 }
@@ -279,139 +281,7 @@ function myFunctionTrust() {
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= Features Section ======= -->
-    <!-- <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-3">
-            <a class="nav-link active show" data-toggle="tab" href="#tab-1">
-              <i class="ri-gps-line"></i>
-              <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-toggle="tab" href="#tab-2">
-              <i class="ri-body-scan-line"></i>
-              <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-toggle="tab" href="#tab-3">
-              <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-toggle="tab" href="#tab-4">
-              <i class="ri-store-line"></i>
-              <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                <p class="font-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{URL::to('public/index/assets/img/features-1.png')}}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="font-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{URL::to('public/index/assets/img/features-2.png')}}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                </ul>
-                <p class="font-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{URL::to('public/index/assets/img/features-3.png')}}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <p class="font-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="{{URL::to('public/index/assets/img/features-4.png')}}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section> --><!-- End Features Section -->
+  
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -432,7 +302,13 @@ function myFunctionTrust() {
               </div>
             </div>
           @endforeach
-          
+          <div class="col-md-6">
+              <div class="icon-box">
+                <i class="fab fa-btc"></i>
+                <h4><a href="{{url('/cryptocurrency')}}">Crypto Currency</a></h4>
+                <p>Crypto Currency</p>
+              </div>
+            </div>
         </div>
 
       </div>
@@ -457,54 +333,7 @@ function myFunctionTrust() {
             </p>
           </div>
           @endforeach
-<!-- 
-          <div class="testimonial-item">
-            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
 
-          <div class="testimonial-item">
-            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="{{URL::to('public/index/assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div> -->
-
-        </div>
-
-      </div>
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Portfolio Section ======= -->
@@ -561,9 +390,7 @@ function myFunctionTrust() {
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active" id="myBtn_portfolio" class="toggle_btn less" onclick="myFunctionPortfolio()">See More</li>
-<!--               <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li> -->
+
             </ul>
           </div>
         </div>
@@ -625,23 +452,7 @@ function myFunctionTrust() {
       @foreach ($getContactMap as $Contact)
             <div class="row" id="cid{{$Contact->id}}">
               <div class="col-lg-12 col-md-12">
-<!-- <<<<<<< HEAD
-                <div class="card">
-                  <div class="card-header card-header-warning">
-                    <h4 class="card-title">Map</h4>
-                    <p class="card-category" id="locationReload">{{$Contact->location}}</p>
-                  </div>
-                   <div class="card-body table-responsive">
-                    <iframe src="{{$Contact->mapp}}" style="width:100%"  height="230" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                  </div>
-                </div>     -->
 
-                <!-- <div class="card"> -->
-                  <!-- <div class="card-header card-header-warning"> -->
-                    <!-- <h4 class="card-title">Map</h4> -->
-                    <!-- <p class="card-category" id="locationReload">{{$Contact->location}}</p> -->
-                  <!-- </div> -->
-                   <!-- <div class="card-body table-responsive"> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.132967979645!2d74.37454781448217!3d31.493028755644133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905fbc3136747%3A0x9c2c1b783238ca17!2sITFalcons!5e0!3m2!1sen!2s!4v1624001262179!5m2!1sen!2s" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   <!-- </div> -->
                 <!-- </div>     -->
@@ -654,16 +465,7 @@ function myFunctionTrust() {
 
         <div class="col-lg-6 mt-4 mt-lg-0">
 
-          <!-- <form method="post"  role="form" class="php-email-form" enctype="" action="{{ route('contactform.add') }}" >
-            @csrf -->
-            <!-- id="contactform" i have deleted this id from form tag to check form without ajax
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name1" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email1" placeholder="Your Email" required>
-                </div> -->
+          
 
             <form  action="{{url('add-contactform')}}" method="POST" enctype="multipart/form-data" class="php-email-form" id="form1" enctype='multipart/form-data'>
                         @csrf
@@ -682,11 +484,7 @@ function myFunctionTrust() {
               <div class=" col-md-12 form-group ">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message1" required></textarea>
               </div>
-              <!-- <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
+             
               <div class="text-center pt-3 "><button type="submit" >Send Message</button></div>
             </div>
             </form>
@@ -720,54 +518,6 @@ function myFunctionTrust() {
   <script src="{{URL::to('public/index/assets/js/main.js')}}"></script>
 
 
- <!-- <script>
-    $("#contactform").submit(function(e){
-      e.preventDefault();
-
-            
-      let name = $("#name1").val();
-      console.log(name) ;
-      let email = $("#email1").val();
-      console.log(email);
-      let subject = $("#subject1").val();
-      console.log(subject);
-      let message = $("#message1").val();
-      console.log(message);
-      let _token = $("input[name=_token]").val();
-
-      $.ajax({
-        type:"POST",
-        data:{
-          name:name,
-          email:email,
-          subject:subject,
-          message:message,
-          _token:_token
-        },
-        success:function(response){
-                    
-          if (response) {
-            function sendEmail(id)
-      {
-        
-        
-            swal({
-                title: "Success!",
-                text:  "Subscribed successfully",
-                type: "success",
-                timer: 3000,
-                showConfirmButton: false
-            });
-            window.setTimeout(function(){ } ,3000);
-            location.reload();
-          
-      }
-            $("#contactform")[0].reset();
-          }
-        }
-      });
-    });
-  </script> -->
 
   <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"03fca553472a45cc",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
 

@@ -11,7 +11,8 @@
             </div>
             <div class="card-content">
             @if (\Session::has('success'))
-              <div class="alert alert-success d-inline ml-2">
+            
+             <div class="alert alert-success d-inline ml-2">
                 
                   <strong>{!! \Session::get('success') !!}</strong>
                 
@@ -65,11 +66,24 @@
               @csrf
               <div class="">
                 <label for="firstname">Image</label>
-                <input type="file" class="form-control" id="image" name="company_logo">
+                <input type="file" class="form-control @error('company_logo') is-invalid @enderror" id="image" name="company_logo">
+                 <!-- Show error -->
+                @error('company_logo')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="lastname">Name</label>
-                <input type="text" class="form-control" id="name" name="partner_name">
+                <input type="text" class="form-control @error('partner_name') is-invalid @enderror" id="name" name="partner_name">
+
+                  <!-- Show error -->
+                @error('partner_name')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               
               <button type="submit" class="btn btn-primary">Submit</button>

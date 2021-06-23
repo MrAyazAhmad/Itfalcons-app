@@ -16,8 +16,8 @@
                   <strong>{!! \Session::get('success') !!}</strong>
                 
               </div>
-            @endif
-              <a href="#" class="btn btn-info d-inline float-right mr-3" data-toggle="modal" data-target="#teamModal">New Team Member</a>
+                           @endif
+              <a href="#" class="btn btn-info d-inline float-right mr-3" data-toggle="modal" data-target="#teamModal">New Entry</a>
                 <div class="table-responsive overflow-hidden pl-2 pr-2">
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
@@ -86,40 +86,70 @@
               </div>
               <div class="form-group">
                 <label for="lastname">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
 
                  <!-- Show error -->
+                @error('name')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
                
               </div>
               <div class="form-group">
                 <label for="email">Designation</label>
-                <input type="text" class="form-control" id="designation" name="designation">
+                <input type="text" class="form-control @error('designation') is-invalid @enderror" id="designation" name="designation">
 
-                 <!-- Show error -->
+                   <!-- Show error -->
+                @error('designation')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
                
               </div>
               <div class="form-group">
                 <label for="email">Facebook Link</label>
-                <input type="text" class="form-control" id="fb" name="fb">
-                 <!-- Show error -->
+                <input type="text" class="form-control @error('fb') is-invalid @enderror" id="fb" name="fb">
+                  <!-- Show error -->
+                @error('fb')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               
               </div>
               <div class="form-group">
                 <label for="email">Twitter Link</label>
-                <input type="text" class="form-control" id="twt" name="twt">
-                 <!-- Show error -->
+                <input type="text" class="form-control @error('twt') is-invalid @enderror" id="twt" name="twt">
+  <!-- Show error -->
+                @error('twt')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
              
               </div>
               <div class="form-group">
                 <label for="email">Instagram Link</label>
-                <input type="text" class="form-control" id="inst" name="inst">
-                 <!-- Show error -->
+                <input type="text" class="form-control @error('inst') is-invalid @enderror" id="inst" name="inst">
+  <!-- Show error -->
+                @error('inst')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
                 
               </div>
               <div class="form-group">
                 <label for="email">Linkedin Link</label>
-                <input type="text" class="form-control" id="lnkd" name="lnkd">
-                 <!-- Show error -->
+                <input type="text" class="form-control @error('lnkd') is-invalid @enderror" id="lnkd" name="lnkd">
+  <!-- Show error -->
+                @error('lnkd')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
                 
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>

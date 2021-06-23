@@ -69,19 +69,43 @@
               @csrf
               <div class="">
                 <label for="firstname">Image</label>
-                <input type="file" class="form-control" id="image" name="image">
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                <!-- Show error -->
+                @error('image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="lastname">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
+                <!-- Show error -->
+                @error('name')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="email">Designation</label>
-                <input type="text" class="form-control" id="designation" name="designation">
+                <input type="text" class="form-control @error('designation') is-invalid @enderror" id="designation" name="designation">
+                <!-- Show error -->
+                @error('designation')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="email">Description</label>
-                <textarea class="form-control" id="description" name="description"></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"></textarea>
+                <!-- Show error -->
+                @error('description')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

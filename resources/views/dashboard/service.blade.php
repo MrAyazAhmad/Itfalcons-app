@@ -72,27 +72,58 @@
               @csrf
               <div class="form-group">
                 <label for="firstname">Icon</label>
-                <input type="text" class="form-control" id="icon" name="icon">
+                <input type="text" class="form-control @error('icon') is-invalid @enderror" id="icon" name="icon">
+                <!-- Show error -->
+                @error('icon')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="lastname">Name</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
+                <!-- Show error -->
+                @error('name')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="email">Short Info</label>
-                <input type="text" class="form-control" id="info" name="info">
+                <input type="text" class="form-control @error('info') is-invalid @enderror" id="info" name="info">
+                <!-- Show error -->
+                @error('info')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="long_description">Long Description</label>
-                <textarea name="long_description" id="long_description" class="form-control"></textarea>
+                <textarea name="long_description" id="long_description" class="form-control @error('long_description') is-invalid @enderror"></textarea>
+                <!-- Show error -->
+                @error('long_description')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="image">Image</label>
-                <input type="file" class="form-control" id="s_image" name="s_image">
+                <input type="file" class="form-control @error('s_image') is-invalid @enderror" id="s_image" name="s_image">
+                <!-- Show error -->
+                @error('s_image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               </div>
               <div class="form-group">
                 <label for="email">Description</label>
                 <textarea name="description" class="form-control" id="description"></textarea>
+                
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

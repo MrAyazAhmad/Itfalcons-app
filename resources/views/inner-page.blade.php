@@ -42,6 +42,17 @@
   ======================================================== -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<style type="text/css">
+  #hero {
+    width: 100% !important;
+    height: 100vh !important;
+    background: url({{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}) top center !important;
+    background-size: cover !important;
+    position: relative !important;
+    padding: 0 !important;
+}
+
+</style>
 </head>
 
 <body>
@@ -58,37 +69,29 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="../">Home</a></li>
+          <li><a href="../">Back Home</a></li>
           
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="../project_detail/{{$getesrvicemain->id}}" class="get-started-btn scrollto">Get Quote</a>
 
     </div>
   </header><!-- End Header -->
-   <section id="hero" style="background:url('{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}'); width: 100%;height: 100vh;background-size: cover;position: relative;padding: 0;background-repeat: no-repeat;">
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+      <h1>{{$getesrvicemain->name}}</h1>
    
-    </section>
+    </div>
+  </section><!-- End Hero -->
+
+
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <!-- <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Inner Page</li>
-          </ol>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Breadcrumbs -->
-    
+   
 
     <section class="inner-page">
       <div class="container mt-2">

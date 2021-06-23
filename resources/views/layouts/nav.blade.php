@@ -32,9 +32,16 @@
             </ul>
           </li> -->
           <li><a href="#contact">Contact</a></li>
+          <!-- <li ></li> -->
+          <li><a href="mailto:info@itfalcons.com"><i class="far fa-envelope"></i> info@itfalcons.com</a></li>
+        <li><a href="">|</a></li>
+        <li><a href="tel:+923134841115""><i class="fas fa-mobile-alt"></i> +92 313 4841115</a></li>
+
+
 
         </ul>
       </nav><!-- .nav-menu -->
+
 
       <a href="#about" class="get-started-btn scrollto">Get Started</a>
 
