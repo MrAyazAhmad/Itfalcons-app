@@ -68,11 +68,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <form method="post" action="{{url('add_service')}}" enctype="multipart/form-data" id="serviceForm">
+            <form method="post" action="{{url('add_service')}}" enctype="multipart/form-data" id="serviceForm" onsubmit="return check_field();">
               @csrf
               <div class="form-group">
                 <label for="firstname">Icon</label>
-                <input type="text" class="form-control @error('icon') is-invalid @enderror" id="icon" name="icon">
+                <input type="text" class="form-control @error('icon') is-invalid @enderror text_field" id="icon" name="icon">
                 <!-- Show error -->
                 @error('icon')
                        <span class="invalid-feedback" role="alert">
@@ -82,7 +82,7 @@
               </div>
               <div class="form-group">
                 <label for="lastname">Name</label>
-                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name">
+                <input type="text" class="form-control @error('name') is-invalid @enderror text_field" id="name" name="name">
                 <!-- Show error -->
                 @error('name')
                        <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
               </div>
               <div class="form-group">
                 <label for="email">Short Info</label>
-                <input type="text" class="form-control @error('info') is-invalid @enderror" id="info" name="info">
+                <input type="text" class="form-control @error('info') is-invalid @enderror text_field" id="info" name="info">
                 <!-- Show error -->
                 @error('info')
                        <span class="invalid-feedback" role="alert">
@@ -102,7 +102,7 @@
               </div>
               <div class="form-group">
                 <label for="long_description">Long Description</label>
-                <textarea name="long_description" id="long_description" class="form-control @error('long_description') is-invalid @enderror"></textarea>
+                <textarea name="long_description" id="long_description" class="form-control @error('long_description') is-invalid @enderror text_field"></textarea>
                 <!-- Show error -->
                 @error('long_description')
                        <span class="invalid-feedback" role="alert">
@@ -112,7 +112,7 @@
               </div>
               <div class="form-group">
                 <label for="image">Image</label>
-                <input type="file" class="form-control @error('s_image') is-invalid @enderror" id="s_image" name="s_image">
+                <input type="file" class="form-control @error('s_image') is-invalid @enderror text_field" id="s_image" name="s_image">
                 <!-- Show error -->
                 @error('s_image')
                        <span class="invalid-feedback" role="alert">
@@ -125,8 +125,8 @@
                 <textarea name="description" class="form-control" id="description"></textarea>
                 
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" id="submit_form" class="btn btn-primary">Submit</button>
+              <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
             </form>
           </div>
         </div>
@@ -169,4 +169,30 @@
         }
       }
     </script>
+
+    <script type="text/javascript">
+$(document).ready(function(){
+ $(".text_field").bind("keyup", check_field);
+});
+
+function check_field()
+{
+ var icon=$("#icon").val();
+ var name=$("#name").val();
+ var info=$("#info").val();
+ var long_description=$("#long_description").val();
+ var s_image=$("#s_image").val();
+ if(icon!="" && name!="" && info!="" && long_description!="" && s_image!="")
+ {
+  $("#submit_form").prop( "disabled", false);
+  return true;
+ }
+ else
+ {
+  $("#submit_form").prop( "disabled", true);
+  
+  return false;
+ }
+}
+</script>
 @endsection
