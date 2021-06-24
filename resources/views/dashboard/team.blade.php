@@ -2,6 +2,23 @@
 
 
 @section('content')
+ @if($errors->first('image') || $errors->first('name') || $errors->first('designation'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                        <<!-- div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            Mail Didn't Sent!
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div> -->
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -70,6 +87,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+                                                  
           <div class="modal-body">
             <form method="post" action="{{url('add_team')}}" enctype="multipart/form-data" id="teamForm">
               @csrf
@@ -179,4 +197,10 @@
         }
       }
     </script>
+
+  <!-- sweet alert cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 @endsection
