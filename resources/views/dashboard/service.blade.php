@@ -110,9 +110,17 @@
                        </span>
                    @enderror
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="image">Image</label>
                 <input type="file" class="form-control @error('s_image') is-invalid @enderror text_field" id="s_image" name="s_image">
+                
+              </div> -->
+              <div class="form-group">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="s_image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
                 <!-- Show error -->
                 @error('s_image')
                        <span class="invalid-feedback" role="alert">
@@ -194,5 +202,12 @@ function check_field()
   return false;
  }
 }
+</script>
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
 </script>
 @endsection
