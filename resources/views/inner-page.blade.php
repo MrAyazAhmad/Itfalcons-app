@@ -45,7 +45,7 @@
 <style type="text/css">
   #hero {
     width: 100% !important;
-    height: 100vh !important;
+    height: 60vh !important;
     background: url({{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}) top center !important;
     background-size: cover !important;
     position: relative !important;
@@ -95,7 +95,7 @@
 
     <section class="inner-page">
       <div class="container mt-2">
-        <h2>
+        <h2 style="text-align: center;">
 
           {{$getesrvicemain->name}}
         </h2><br>
@@ -109,7 +109,7 @@
         </div> -->
         <div class="container mt-2">
         <p>{!!$getesrvicemain->description!!}</p>
-        <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a>
+        <!-- <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a> -->
       </div>
     </section>
 
