@@ -2,6 +2,18 @@
 
 
 @section('content')
+ @if($errors->first('company_logo') || $errors->first('partner_name'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -64,10 +76,14 @@
           <div class="modal-body">
             <form method="post" action="{{url('add_technology')}}" enctype="multipart/form-data" id="teamForm">
               @csrf
-              <div class="">
-                <label for="firstname">Image</label>
-                <input type="file" class="form-control @error('company_logo') is-invalid @enderror" id="image" name="company_logo">
-                 <!-- Show error -->
+             <div >
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('company_logo') is-invalid @enderror" id="customFile" name="company_logo">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+
+                <!-- Show error -->
                 @error('company_logo')
                        <span class="invalid-feedback" role="alert">
                            <strong>{{ $message }}</strong>
@@ -113,4 +129,9 @@
         }
       }
     </script>
+     <!-- sweet alert cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 @endsection

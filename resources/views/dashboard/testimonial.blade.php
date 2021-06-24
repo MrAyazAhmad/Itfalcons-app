@@ -2,6 +2,18 @@
 
 
 @section('content')
+ @if($errors->first('image') || $errors->first('name') || $errors->first('designation') || $errors->first('description'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -67,9 +79,13 @@
           <div class="modal-body">
             <form method="post" action="{{url('add_testimonial')}}" enctype="multipart/form-data" id="testimonialForm">
               @csrf
-              <div class="">
-                <label for="firstname">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+              <div >
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('image') is-invalid @enderror" id="customFile" name="image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+
                 <!-- Show error -->
                 @error('image')
                        <span class="invalid-feedback" role="alert">

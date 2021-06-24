@@ -2,6 +2,18 @@
 
 
 @section('content')
+@if($errors->first('icon') || $errors->first('name') || $errors->first('info') || $errors->first('long_description') || $errors->first('s_image'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -67,12 +79,6 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-
-          <!--  <script type="text/javascript">
-        $(document).ready(function() {
-            $('#submit_form').attr("disabled", true);
-        });
-        </script> -->
           <div class="modal-body">
             <form method="post" action="{{url('add_service')}}" enctype="multipart/form-data" id="serviceForm" >
               @csrf
@@ -116,17 +122,14 @@
                        </span>
                    @enderror
               </div>
-              <!-- <div class="form-group">
-                <label for="image">Image</label>
-                <input type="file" class="form-control @error('s_image') is-invalid @enderror text_field" id="s_image" name="s_image">
-                
-              </div> -->
-              <div class="form-group">
+
+              <div >
                   <p>Upload image file:</p>
                 <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile" name="s_image">
+                  <input type="file" class="custom-file-input  @error('s_image') is-invalid @enderror" id="customFile" name="s_image">
                   <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
+
                 <!-- Show error -->
                 @error('s_image')
                        <span class="invalid-feedback" role="alert">
