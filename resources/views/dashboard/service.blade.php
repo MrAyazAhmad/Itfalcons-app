@@ -188,26 +188,6 @@
     </script>
 
 
-function check_field()
-{
- var icon=$("#icon").val();
- var name=$("#name").val();
- var info=$("#info").val();
- var long_description=$("#long_description").val();
- var s_image=$("#s_image").val();
- if(icon!="" && name!="" && info!="" && long_description!="" && s_image!="")
- {
-  $("#submit_form").prop( "disabled", false);
-  return true;
- }
- else
- {
-  $("#submit_form").prop( "disabled", true);
-  
-  return false;
- }
-}
-</script>
 <script>
 // Add the following code if you want the name of the file appear on select
 $(".custom-file-input").on("change", function() {
