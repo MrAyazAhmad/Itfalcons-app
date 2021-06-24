@@ -76,10 +76,14 @@
           <div class="modal-body">
             <form method="post" action="{{url('add_technology')}}" enctype="multipart/form-data" id="teamForm">
               @csrf
-              <div class="">
-                <label for="firstname">Image</label>
-                <input type="file" class="form-control @error('company_logo') is-invalid @enderror" id="image" name="company_logo">
-                 <!-- Show error -->
+             <div >
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('company_logo') is-invalid @enderror" id="customFile" name="company_logo">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+
+                <!-- Show error -->
                 @error('company_logo')
                        <span class="invalid-feedback" role="alert">
                            <strong>{{ $message }}</strong>

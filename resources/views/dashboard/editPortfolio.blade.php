@@ -71,20 +71,48 @@
               <!-- <div class="row">
               </div> -->
               <div class="row">
-                <div class="col-12">
+              <!--   <div class="col-12">
                   <label for="email" >Image</label>
                   <br>
                   <img src="{{URL::to('public/image/portfolio')}}/{{$portfolio->image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
                   <input type="file" class="form-control"  name="image" >
+
+
+                </div> -->
+                 <div class="col-12">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
+                <!-- Show error -->
+                @error('image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
+                   <img src="{{URL::to('public/image/portfolio')}}/{{$portfolio->image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
+              </div>
+
+
               </div>
                 
                   <label for="email" class="col-12 text-center"><strong>Sub Images</strong></label>
-                 <input type="file" class="form-control" id="image" name="image2[]" multiple>
+                 <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="image2[]">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <!-- Show error -->
+                @error('image2[]')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
               <div class="row">
                 @foreach ($portfolioimg as $img)
                   <div class="col-6 text-center" id="pI_id{{$img->id}}">
-                    <img src="{{URL::to('public/image/portfolio')}}/{{$img->portfolio_img}}" class="col-12" alt="" style="height:200px;">
+                    <img src="{{URL::to('public/image/portfolio')}}/{{$img->portfolio_img}}" class="col-12 pb-1 pr-5 pl-5 col-6" alt="" style="height:200px;" >
                     <a href="javascript:void(0)" onclick="editPortfolioImg({{$img->id}})" class="btn btn-info p-2">Edit</a>
                     <a href="javascript:void(0)" onclick="deletePortfolio({{$img->id}})" class="btn btn-danger p-2">Delete</a>
                   </div>

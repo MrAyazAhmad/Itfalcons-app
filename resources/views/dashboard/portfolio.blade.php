@@ -173,9 +173,12 @@
                        </span>
                    @enderror
               </div>
-              <div class=" col-md-12">
-                <label for="image">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+            <div class="col-md-12">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('image') is-invalid @enderror" id="customFile" name="image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
 
                 <!-- Show error -->
                 @error('image')
@@ -184,12 +187,14 @@
                        </span>
                    @enderror
               </div>
-              <div class=" col-md-12">
-                <label for="email">Sub Image</label>
-                <input type="file" class="form-control @error('image2[]') is-invalid @enderror" id="image" name="image2[]" multiple>
+              <div class="col-md-12">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('image2[]') is-invalid @enderror" id="customFile" name="image2[]">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
 
-
-                 <!-- Show error -->
+                <!-- Show error -->
                 @error('image2[]')
                        <span class="invalid-feedback" role="alert">
                            <strong>{{ $message }}</strong>

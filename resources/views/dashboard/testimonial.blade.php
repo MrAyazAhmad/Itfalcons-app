@@ -79,9 +79,13 @@
           <div class="modal-body">
             <form method="post" action="{{url('add_testimonial')}}" enctype="multipart/form-data" id="testimonialForm">
               @csrf
-              <div class="">
-                <label for="firstname">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" required>
+              <div >
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input  @error('image') is-invalid @enderror" id="customFile" name="image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+
                 <!-- Show error -->
                 @error('image')
                        <span class="invalid-feedback" role="alert">

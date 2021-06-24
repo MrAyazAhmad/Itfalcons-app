@@ -41,9 +41,18 @@
                 <input type="text" class="form-control" name="lnkd" value="{{$team->lnkd}}">
               </div>
               <div class="">
-                <label for="email">Image</label>
-                <img src="{{URL::to('public/image/team')}}/{{$team->image}}" alt="">
-                <input type="file" class="form-control" name="image" >
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <!-- Show error -->
+                @error('image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
+                   <img src="{{URL::to('public/image/team')}}/{{$team->image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
               </div>
               
               <button type="submit" class="btn btn-primary">Submit</button>

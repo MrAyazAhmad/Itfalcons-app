@@ -21,10 +21,20 @@
                 <input type="text" class="form-control" name="partner_name" value="{{$partner->partner_name}}">
               </div>
               
-              <div class="">
-                <label for="email">Image</label>
-                <img src="{{URL::to('public/image/partner')}}/{{$partner->company_logo}}" alt="">
-                <input type="file" class="form-control" name="company_logo" >
+           
+               <div class="form-group">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="company_logo">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <!-- Show error -->
+                @error('company_logo')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
+                   <img src="{{URL::to('public/image/partner')}}/{{$partner->company_logo}}" class="pb-1 pr-5 pl-5 col-6" alt="">
               </div>
               
               <button type="submit" class="btn btn-primary">Submit</button>

@@ -33,11 +33,19 @@
                 <label for="lastname">Long description</label>
                 <input type="text" class="form-control" name="long_description" value="{{$service->long_description}}">
               </div>
-              <div class="form-group">
-                <label for="lastname">Service Image</label>
-                <br>
-                  <img src="{{URL::to('public/image/service')}}/{{$service->s_image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
-                <input type="file" class="form-control" name="s_image" >
+             <div class="form-group">
+                  <p>Upload image file:</p>
+                <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile" name="s_image">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <!-- Show error -->
+                @error('s_image')
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $message }}</strong>
+                       </span>
+                   @enderror
+                   <img src="{{URL::to('public/image/service')}}/{{$service->s_image}}" class="pb-1 pr-5 pl-5 col-6" alt="">
               </div>
 
 
@@ -67,4 +75,5 @@
         height: 400
     });
 </script>
+
 @endsection
