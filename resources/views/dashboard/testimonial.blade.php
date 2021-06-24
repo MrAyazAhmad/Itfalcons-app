@@ -2,6 +2,18 @@
 
 
 @section('content')
+ @if($errors->first('image') || $errors->first('name') || $errors->first('designation') || $errors->first('description'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -69,7 +81,7 @@
               @csrf
               <div class="">
                 <label for="firstname">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" required>
                 <!-- Show error -->
                 @error('image')
                        <span class="invalid-feedback" role="alert">

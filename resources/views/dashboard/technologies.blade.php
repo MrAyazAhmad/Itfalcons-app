@@ -2,6 +2,18 @@
 
 
 @section('content')
+ @if($errors->first('company_logo') || $errors->first('partner_name'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
   <div class="row">
     <div class="col-md-12">
         <!-- Advanced Tables -->
@@ -113,4 +125,9 @@
         }
       }
     </script>
+     <!-- sweet alert cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 @endsection

@@ -2,6 +2,18 @@
 
 
 @section('content')
+ @if($errors->first('name') || $errors->first('info') || $errors->first('type') || $errors->first('category') || $errors->first('client')|| $errors->first('project_date') || $errors->first('project_url')|| $errors->first('description')|| $errors->first('image')|| $errors->first('image2[]'))
+                                        <script>
+                                      swal({
+                title: "Error!",
+                text:  "Something is missing!",
+                type: "error",
+                timer: 3000,
+                showConfirmButton: false
+            });
+                                        </script>
+                                       
+                                        @endif
 
   <div class="row">
     <div class="col-md-12">
@@ -95,7 +107,7 @@
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Portfolio Type</label>
-                <select name="type" id="getroleF" class="form-control @error('type') is-invalid @enderror " required>
+                <select name="type" id="getroleF" class="form-control @error('type') is-invalid @enderror " >
                   <!-- Show error -->
                 @error('type')
                        <span class="invalid-feedback" role="alert">
@@ -162,7 +174,7 @@
                    @enderror
               </div>
               <div class=" col-md-12">
-                <label for="email">Image</label>
+                <label for="image">Image</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
 
                 <!-- Show error -->
@@ -174,11 +186,11 @@
               </div>
               <div class=" col-md-12">
                 <label for="email">Sub Image</label>
-                <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image" name="image2[]" multiple>
+                <input type="file" class="form-control @error('image2[]') is-invalid @enderror" id="image" name="image2[]" multiple>
 
 
                  <!-- Show error -->
-                @error('image2')
+                @error('image2[]')
                        <span class="invalid-feedback" role="alert">
                            <strong>{{ $message }}</strong>
                        </span>
