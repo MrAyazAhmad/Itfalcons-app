@@ -184,7 +184,7 @@
       }
     </script>
 
-
+<script type="text/javascript">
 function check_field()
 {
  var icon=$("#icon").val();
