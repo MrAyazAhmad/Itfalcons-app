@@ -67,8 +67,14 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+
+          <!--  <script type="text/javascript">
+        $(document).ready(function() {
+            $('#submit_form').attr("disabled", true);
+        });
+        </script> -->
           <div class="modal-body">
-            <form method="post" action="{{url('add_service')}}" enctype="multipart/form-data" id="serviceForm" onsubmit="return check_field();">
+            <form method="post" action="{{url('add_service')}}" enctype="multipart/form-data" id="serviceForm" >
               @csrf
               <div class="form-group">
                 <label for="firstname">Icon</label>
@@ -125,7 +131,7 @@
                 <textarea name="description" class="form-control" id="description"></textarea>
                 
               </div>
-              <button type="submit" id="submit_form" class="btn btn-primary">Submit</button>
+              <input type="submit" id="submit_form" class="btn btn-primary"  value="Submit">
               <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
             </form>
           </div>
@@ -170,29 +176,5 @@
       }
     </script>
 
-    <script type="text/javascript">
-$(document).ready(function(){
- $(".text_field").bind("keyup", check_field);
-});
 
-function check_field()
-{
- var icon=$("#icon").val();
- var name=$("#name").val();
- var info=$("#info").val();
- var long_description=$("#long_description").val();
- var s_image=$("#s_image").val();
- if(icon!="" && name!="" && info!="" && long_description!="" && s_image!="")
- {
-  $("#submit_form").prop( "disabled", false);
-  return true;
- }
- else
- {
-  $("#submit_form").prop( "disabled", true);
-  
-  return false;
- }
-}
-</script>
 @endsection
