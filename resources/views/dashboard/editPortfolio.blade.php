@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group col-4">
                   <label for="email">Type</label>
-                  <select name="type" id="getroleF" class="form-control" required>
+                  <select name="type" id="getroleF" class="form-control pt-2" required>
                     <option value="{{$portfolio->type}}">{{$portfolio->type}}</option>
                     <option value="">none</option>
                     <?php if ("web" != $portfolio->type) { ?>
@@ -81,7 +81,7 @@
                 </div> -->
                  <div class="col-12">
                   <p>Upload image file:</p>
-                <div class="custom-file mb-3">
+                <div class="custom-file mb-3" style="width:50%">
                   <input type="file" class="custom-file-input" id="customFile" name="image">
                   <label class="custom-file-label" for="customFile">Choose file</label>
                 </div>
@@ -97,11 +97,11 @@
 
               </div>
                 
-                  <label for="email" class="col-12 text-center"><strong>Sub Images</strong></label>
+                  <label for="email" class="col-12 pb-3 pt-4"><strong>Sub Images</strong></label>
                  <p>Upload image file:</p>
-                <div class="custom-file mb-3">
+                <div class="custom-file mb-3" style="width: 50%">
                   <input type="file" class="custom-file-input" id="customFile" name="image2[]">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
+                  <label class="custom-file-label" for="customFile" >Choose file</label>
                 </div>
                 <!-- Show error -->
                 @error('image2[]')
