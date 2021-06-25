@@ -46,10 +46,15 @@
   #hero {
     width: 100% !important;
     height: 60vh !important;
-    background: url({{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}) top center !important;
+    /*background: url({{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}) top center !important;*/
     background-size: cover !important;
     position: relative !important;
     padding: 0 !important;
+}
+.responsive {
+  width: 80%;
+  padding: 10 10 10 10;
+  height: auto;
 }
 
 </style>
@@ -82,6 +87,9 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+    <video autoplay muted loop id="myVideo">
+  <source src="{{URL::to('public')}}/video/video1.mp4" type="video/mp4">
+</video>
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>{{$getesrvicemain->name}}</h1>
    
@@ -111,7 +119,26 @@
         <p>{!!$getesrvicemain->description!!}</p>
         <!-- <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a> -->
       </div>
+        <!-- <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="responsive"> -->
+
+        <div class="row">
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+
+          </div>
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="card-img-top" alt="...">
+
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          </div>
+
+        </div>
+
     </section>
+
+
 
 
 
