@@ -107,7 +107,7 @@
               </div>
               <div class="form-group col-md-6 col-sm-12">
                 <label for="email">Portfolio Type</label>
-                <select name="type" id="getroleF" class="form-control @error('type') is-invalid @enderror " >
+                <select name="type" id="getroleF" class="form-control @error('type') is-invalid @enderror pb-1 " >
                   <!-- Show error -->
                 @error('type')
                        <span class="invalid-feedback" role="alert">
