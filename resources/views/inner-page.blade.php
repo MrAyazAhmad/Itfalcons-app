@@ -120,6 +120,7 @@
         <!-- <a href="../project_detail/{{$getesrvicemain->id}}" class="btn btn-info">Get Started</a> -->
       </div>
         <!-- <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="responsive"> -->
+        @if(isset($getesrvicemain->s_image))
 
         <div class="row">
           <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -135,6 +136,7 @@
           </div>
 
         </div>
+        @endif
 
     </section>
 
