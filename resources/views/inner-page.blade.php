@@ -125,8 +125,8 @@
           <div class="col-lg-2 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
 
           </div>
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
+          <div class="col-lg-8 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="">
               <img src="{{URL::to('public/image/service')}}/{{$getesrvicemain->s_image}}" class="card-img-top" alt="...">
 
             </div>

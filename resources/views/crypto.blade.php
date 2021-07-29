@@ -34,6 +34,7 @@
 <head>
 	<title>About Bitcoin</title>
 	<meta charset="utf-8">
+  <link href="{{URL::to('public/image/favicon.png')}}" rel="icon">
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 	<!-- <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -259,7 +260,7 @@
 					<li><i class="fas fa-fighter-jet"></i> How does Bitcoin work with taxes?</li>
 					<li><i class="fas fa-fighter-jet"></i> Is there with Bitcoin consumer protection?</li>
 					</ul>
-					<button class="signup-btn" data-toggle="modal" data-target="#myModal"><a>Registered Now</a></button>
+					<!-- <button class="signup-btn" data-toggle="modal" data-target="#myModal"><a>Registered Now</a></button> -->
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
@@ -274,8 +275,8 @@
 		<div class="row signup-sec">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<h1>It’s never too late to get started. Buy, store and learn about Bitcoin and Ethereum now.</h1>
-				<h4>Signup Now And Get Started</h4>
-				<button class="signup-btn" data-toggle="modal" data-target="#myModal"><a>Registered Now</a></button>
+				<!-- <h4>Signup Now And Get Started</h4> -->
+				<!-- <button class="signup-btn" data-toggle="modal" data-target="#myModal"><a>Registered Now</a></button> -->
 			</div>
 		</div>
 	</div>

@@ -90,6 +90,13 @@
               <p>Testimonial</p>
             </a>
           </li>
+          <li>
+
+          <a href="contactform_detail">
+              <i class="nc-icon nc-ruler-pencil"></i>
+              <p>Contact Form Detail</p>
+            </a>
+          </li>
           <!-- <li>
             <a href="aboutIcon">
               <i class="nc-icon nc-paper"></i>
