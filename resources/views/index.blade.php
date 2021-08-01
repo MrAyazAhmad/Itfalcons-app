@@ -137,9 +137,9 @@
               Our solutions are “Brilliantly Built” because they have our customers at the center. Backed by fanatical support, in depth expertise of consultants. We deliver lifestyle, not just solutions.
             </p>
             <ul>
-              <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit corporis sint.</li><!-- 
+              <li><i class="bx bx-check-double"></i> 7X24 SUPPORT</li>
+              <li><i class="bx bx-check-double"></i> INNOVATION</li>
+              <li><i class="bx bx-check-double"></i> OPTIMIZE CODE</li><!-- 
               <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li> -->
             <p>
              Our commitment is to ensure the quality of service through offering consistent engagements.

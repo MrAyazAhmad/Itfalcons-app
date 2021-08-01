@@ -28,7 +28,7 @@ class Controller extends BaseController
         // dd($collections);
         // die();
         return view('index')->with('getContact', Contact::all())->with('getPortfolio', Portfolio::take(6)->get())
-        ->with('collections', Portfolio::skip($skip)->take($limit)->get())->with('getService', Service::all())->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all())->with('getPartners', Our_Partners::all())->with('getContactMap', Contact::all());
+        ->with('collections', Portfolio::skip($skip)->take($limit)->get())->with('getService', Service::all())->with('getServicefooter', Service::all()->random(6))->with('getTeam', Team::all())->with('getTestimonial', Testimonial::all())->with('getPartners', Our_Partners::all())->with('getContactMap', Contact::all());
        
 	}
 	public function getPortfolioIndex($id)
@@ -45,7 +45,7 @@ class Controller extends BaseController
 
         // $getService = Service::all();
 		
-        return view('inner-page')->with('getesrvicemain', $service)->with('getService', Service::all());
+        return view('inner-page')->with('getesrvicemain', $service)->with('getService', Service::all()->random(6));
        
 	}
 	

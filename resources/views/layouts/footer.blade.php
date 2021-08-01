@@ -40,7 +40,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-            @foreach ($getService as $service)
+            @foreach ($getServicefooter as $service)
 
 
               <li><i class="bx bx-chevron-right"></i> <a href="{{url('/service_details')}}/{{$service->id}}">{{$service->name}}</a></li>
