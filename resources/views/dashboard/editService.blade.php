@@ -55,7 +55,7 @@
 
               <div class="form-group">
                 <label for="lastname">Description</label>
-                <textarea name="description" class="form-control" id="description">{!!$service->description!!}</textarea>
+                <textarea name="description" class="form-control" id="summernote">{!!$service->description!!}</textarea>
 
                 <!-- <textarea name="description" class="form-control">{!!$service->description!!}</textarea> -->
                 <!-- <input type="text" class="form-control" name="description" value="{{$service->description}}"> -->
@@ -71,9 +71,14 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <script type="text/javascript">
-    $('#description').summernote({
-        height: 400
-    });
+$('#summernote').summernote({
+  lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
+fontNames: [ 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento'],
+  
+});
+// $('#summernote').summernote('fontName', 'Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Sacramento');
+
+
 </script>
 
 @endsection

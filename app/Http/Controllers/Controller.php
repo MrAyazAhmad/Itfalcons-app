@@ -36,16 +36,13 @@ class Controller extends BaseController
         $portfolio = Portfolio::find($id);
 		$portfolioImg = PortfolioImages::where("portfolio_id","=",$portfolio->id)->get();
 		
-        return view('portfolio-details')->with('getPortfolio', $portfolio)->with('getPortfolioImg', $portfolioImg)->with('getService', Service::all());;
+        return view('portfolio-details')->with('getPortfolio', $portfolio)->with('getPortfolioImg', $portfolioImg)->with('getServicefooter', Service::all()->random(6))->with('getService', Service::all());;
        
 	}
 	public function getServiceIndex($id)
 	{
-        $service = Service::find($id);
-
-        // $getService = Service::all();
-		
-        return view('inner-page')->with('getesrvicemain', $service)->with('getService', Service::all()->random(6));
+        $service = Service::find($id);		
+        return view('inner-page')->with('getesrvicemain', $service)->with('getServicefooter', Service::all()->random(6));
        
 	}
 	

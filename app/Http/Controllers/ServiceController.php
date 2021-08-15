@@ -44,6 +44,7 @@ class ServiceController extends Controller
     }
     public function updateService(Request $request)
     {
+        
         $request->validate([
             'name' => 'required',
             'info' => 'required',
@@ -56,7 +57,6 @@ class ServiceController extends Controller
         $service->info = $request->info;
         $service->icon = $request->icon;
         $service->long_description = $request->long_description;
-        $service->s_image = $request->s_image;
         $service->description = $request->description;
         if ($image = $request->file('s_image')) {
             $destinationPath = 'public/image/service/';

@@ -14,6 +14,9 @@
   <link href="{{URL::to('public/index/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <!-- <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/gelasio" rel="stylesheet"> -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
+<link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 
@@ -69,7 +72,7 @@
 </video>
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1>Plan. Launch. Grow.</h1>
-      <h2>Build or Scale up your Business By Our ExpertTeam</h2>
+      <h2>Build or Scale up your Business by Our Expert Team</h2>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Let's Begin</a>
       
@@ -131,7 +134,7 @@
           </div>
 
           <div class="col-lg-6 pt-3 pt-lg-0 content">
-            <h3>Build or Scale up your Business <br>By Our ExpertTeam</h3>
+            <h3>Build Or Scale Up Your<br>Business By Our Expert Team</h3>
             <br>
             <p class="font-italic">
               Our solutions are “Brilliantly Built” because they have our customers at the center. Backed by fanatical support, in depth expertise of consultants. We deliver lifestyle, not just solutions.
@@ -302,13 +305,13 @@ function myFunctionTrust() {
               </div>
             </div>
           @endforeach
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
               <div class="icon-box">
                 <i class="fab fa-btc"></i>
                 <h4><a href="{{url('/cryptocurrency')}}">Crypto Currency</a></h4>
                 <p>Crypto Currency</p>
               </div>
-            </div>
+            </div> -->
         </div>
 
       </div>
@@ -453,7 +456,7 @@ function myFunctionTrust() {
             <div class="row" id="cid{{$Contact->id}}">
               <div class="col-lg-12 col-md-12">
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.132967979645!2d74.37454781448217!3d31.493028755644133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905fbc3136747%3A0x9c2c1b783238ca17!2sITFalcons!5e0!3m2!1sen!2s!4v1624001262179!5m2!1sen!2s" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13628.309492657414!2d74.16703382412605!3d31.35684402650583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918557942080da5%3A0x4724dd2887a54af8!2sQuaid%20Block%20Bahria%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1627838625392!5m2!1sen!2s" style="width:100%"  height="372" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                   <!-- </div> -->
                 <!-- </div>     -->
 

@@ -10,7 +10,7 @@
             <div class="footer-info">
               <h3>ITFalcons</h3>
               <p>
-                Service Road, New Super Town <br>
+                Quaid Block, Bahria Town <br>
                  Lahore, Punjab, Pakistan<br><br>
                 <strong>Phone:</strong> (+92) 313 4841115<br>
                 <strong>Email:</strong> info@itfalcons.com<br>

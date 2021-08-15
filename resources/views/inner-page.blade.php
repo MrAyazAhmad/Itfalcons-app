@@ -43,6 +43,18 @@
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <style type="text/css">
+html{
+  font-family: "Lato", sans-serif !important;
+
+}
+body{
+  font-family: "Lato ", sans-serif !important;
+
+}
+:root {
+  font-family: "Lato ", sans-serif !important;
+  
+}
   #hero {
     width: 100% !important;
     height: 60vh !important;
@@ -50,6 +62,8 @@
     background-size: cover !important;
     position: relative !important;
     padding: 0 !important;
+}
+}
 }
 .responsive {
   width: 80%;
