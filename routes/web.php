@@ -43,6 +43,8 @@ Route::post('customlogin', [CustomLoginController::class,'authenticate']);
 // Route::get('login', [Controller::class,'getLogin']);
 /*route for sending email on form submission......*/
 Route::post('add-contactform',[ContactFormController::class,'addContactform'])->name('contactform.add');
+Route::get('projectreq_detail',[ProjectReqController::class,'index']);
+Route::get('projectreqs/{id}',[ProjectReqController::class,'getProjectReqById']);
 Route::get('contactform_detail',[ContactFormController::class,'index']);
 Route::get('contactforms/{id}',[ContactFormController::class,'getContactformById']);
 /*for editing dashbord googlemap*/

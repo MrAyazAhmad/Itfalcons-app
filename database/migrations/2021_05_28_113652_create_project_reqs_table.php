@@ -18,7 +18,10 @@ class CreateProjectReqsTable extends Migration
             $table->string('name',191)->nullable();
             $table->string('email',191)->nullable();
             $table->string('technology',191)->nullable();
+            $table->string('budget',191)->nullable();
             $table->string('requirement',191)->nullable();
+            $table->string('contact',191)->nullable();
+            $table->string('deadline',191)->nullable();
             $table->timestamps();
         });
     }

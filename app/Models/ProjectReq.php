@@ -11,5 +11,5 @@ class ProjectReq extends Model
     
     protected $table = "project_reqs";
 
-    protected $fillable = ["name","email","technology","requirement","budget","deadline"];
+    protected $fillable = ["name","email","technology","requirement","budget","deadline","contact"];
 }

@@ -17,6 +17,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+<!-- popupforms urls -->
+
+ <link href="{{URL::to('public/index/assets/vendor/popupform/css/opensans-font.css')}}" rel="stylesheet">
+<link href="{{URL::to('public/index/assets/vendor/popupform/css/jquery-ui.min.css')}}" rel="stylesheet">
+<link href="{{URL::to('public/index/assets/vendor/popupform/css/style.css')}}" rel="stylesheet">
+<link href="{{URL::to('public/index/assets/vendor/popupform/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet">
+
+
   <!-- Vendor CSS Files -->
   <link href="{{URL::to('public/index/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{URL::to('public/index/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
@@ -33,6 +41,13 @@
     
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+  <!-- sweet alert cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
 
   <!-- =======================================================
   * Template Name: Dewi - v2.2.1
@@ -75,6 +90,17 @@ body{
 </head>
 
 <body>
+  <!-- @include('layouts.nav') -->
+  @if (\Session::has('success'))
+     <script>
+                                        Swal.fire ({
+                                            title: "Thanks ",
+                                            html: "<ul class='alert-font-size'> <li class='text-left'>Received Your Message We Will Contact You Soon</li><ul>",
+                                            icon: "success"
+                                        });
+                                    </script>
+            @endif
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
@@ -94,10 +120,101 @@ body{
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="../project_detail/{{$getesrvicemain->id}}" class="get-started-btn scrollto">Get Quote</a>
+      <!-- <a href="../project_detail/{{$getesrvicemain->id}}" class="get-started-btn scrollto">Get Quote</a> -->
+
+       <button type="button" class="get-started-btn scrollto" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Get Quote</button>
 
     </div>
   </header><!-- End Header -->
+
+
+<!--   here is the modal section:  -->
+<!-- Modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Web Development</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3" action="{{url('detail_send')}}" method="POST" enctype="multipart/form-data">
+          @csrf
+  <div class="col-md-6">
+    <label for= "contact">Name</label>
+    <input type="text" name="name" class="form-control" id="inputEmail4" >
+  </div>
+  <div class="col-md-6">
+    <label for= "contact">Email</label>
+    <input type="email" name="email" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-md-6" style="padding-top:20px;">
+<label for= "contact">Contact</label>
+    <input type="number" name="contact" class="form-control" id="inputPassword4" >
+  </div>
+  <div class="col-6" style="padding-top:20px;">
+    <label for= "contact">Technology</label>
+    <select id="inputState" name="technology" class="form-control">
+      <option selected>select</option>
+        @foreach ($serviceTech as $tech)
+           <option value="{{$tech->id}}">{{$tech->technology}}</option>
+        @endforeach
+
+    </select>
+  </div>
+
+  <div class="col-md-6" style="padding-top:20px;">
+    <label for= "contact">Budget</label>
+    <input type="number" name="budget" class="form-control" id="inputCity"  >
+  </div>
+  
+  <div class="col-md-6" style="padding-top:20px;">
+    <label for= "contact">Deadline</label>
+    <input type="date" name="deadline" class="form-control" id="inputZip"  placeholder="Project Deadline">
+  </div>
+
+  <div class="col-12" style="padding-top:20px;">
+    <label for= "contact">Requirements</label>
+    <textarea class="form-control" name="requirement" id="inputAddress"></textarea>
+  </div>
+  <div class="col-12 modal-footer" style="padding-top:40px;">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" style="">Close</button>
+        <button type="submit" class="get-started-btn " style="background-color:#FD3800;">Send message</button>
+      </div>
+</form>
+      </div>
+      <!-- <div class="modal-footer">
+       
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.steps.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script> -->
+
+<script src="{{URL::to('public/index/assets/vendor/popupform/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{URL::to('public/index/assets/vendor/popupform/js/jquery.steps.js')}}"></script>
+<script src="{{URL::to('public/index/assets/vendor/popupform/js/jquery-ui.min.js')}}"></script>
+<script src="{{URL::to('public/index/assets/vendor/popupform/js/js/main.js')}}"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="../../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"67f1b6d76aecc611","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.8.0","si":10}'></script>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">

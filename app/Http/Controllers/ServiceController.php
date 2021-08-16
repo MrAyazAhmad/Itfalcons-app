@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Models\ServiceTech;
 
 class ServiceController extends Controller
 {
@@ -69,7 +70,7 @@ class ServiceController extends Controller
     }
     public function getServiceById($id)
     {
-        $service = Service::find($id);
+    
         return view('dashboard/editService',compact('service'));
     }
 

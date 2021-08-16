@@ -1,0 +1,9 @@
+THESE 
+1 js
+2. fonts 
+
+3. images
+
+4. css 
+
+are folders for touch quotes  (services inner pages.).

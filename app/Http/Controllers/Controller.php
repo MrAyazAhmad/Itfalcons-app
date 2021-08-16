@@ -11,6 +11,7 @@ use App\Models\Portfolio;
 use App\Models\PortfolioImages;
 use App\Models\Service;
 use App\Models\Team;
+use App\Models\ServiceTech;
 use App\Models\Testimonial;
 use App\Models\Our_Partners;
 use Auth;
@@ -41,8 +42,11 @@ class Controller extends BaseController
 	}
 	public function getServiceIndex($id)
 	{
+
+        $serviceTech = ServiceTech::all();
+        $service = Service::find($id);
         $service = Service::find($id);		
-        return view('inner-page')->with('getesrvicemain', $service)->with('getServicefooter', Service::all()->random(6));
+        return view('inner-page')->with('getesrvicemain', $service)->with('getServicefooter', Service::all()->random(6))->with('serviceTech', $serviceTech);
        
 	}
 	

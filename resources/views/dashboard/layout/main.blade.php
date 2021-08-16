@@ -91,6 +91,12 @@
             </a>
           </li>
           <li>
+            <a href="projectreq_detail">
+            <i class="fas fa-project-diagram"></i>     
+         <p>Project Requirement</p>
+            </a>
+          </li>
+          <li>
 
           <a href="contactform_detail">
               <i class="nc-icon nc-ruler-pencil"></i>
